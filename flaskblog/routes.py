@@ -46,3 +46,23 @@ def register():
             return redirect(url_for("home"))
 
     return render_template("register.html", title="Register", form=form)
+
+
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    form = LoginForm()
+    if request.method == "POST":
+        users = mongo.db.users
+        login_user = users.find_one({"name": form.username.data})
+        if login_user:
+            if (
+                bcrypt.hashpw(
+                    form.password.data.encode("utf-8"), login_user["password"]
+                )
+                == login_user["password"]
+            ):
+                session["username"] = form.username.data
+                return redirect(url_for("home"))
+        flash("Login Unsuccessful. Please check email and password", "danger")
+
+    return render_template("login.html", title="Login", form=form)

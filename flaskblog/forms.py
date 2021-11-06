@@ -32,3 +32,10 @@ class RegistrationForm(FlaskForm):
         existing_user = users.find_one({"email": email.data})
         if existing_user:
             raise ValidationError("That email is taken. Please choose a different one.")
+
+
+class LoginForm(FlaskForm):
+    username = StringField("Username", validators=[DataRequired()])
+    password = PasswordField("Password", validators=[DataRequired()])
+    remember = BooleanField("Remember Me")
+    submit = SubmitField("Login")
