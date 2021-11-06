@@ -24,3 +24,25 @@ def home():
         check = 1
     reviews = mongo.db["reviews"].find({})
     return render_template("home.html", check=check, reviews=reviews)
+
+
+@app.route("/register", methods=["POST", "GET"])
+def register():
+    form = RegistrationForm()
+    if request.method == "POST":
+        users = mongo.db.users
+        if form.validate_on_submit():
+            hashpass = bcrypt.hashpw(
+                form.password.data.encode("utf-8"), bcrypt.gensalt()
+            )
+            users.insert(
+                {
+                    "name": form.username.data,
+                    "password": hashpass,
+                    "email": form.email.data,
+                }
+            )
+            session["username"] = request.form["username"]
+            return redirect(url_for("home"))
+
+    return render_template("register.html", title="Register", form=form)
