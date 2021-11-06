@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='dist/assets/owl.carousel.min.css') }}" />
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='dist/assets/owl.theme.default.min.css') }}" />
+{% endblock head %}
+
+
+{% block content %}
+<div class="container">
+  <h1 class="mt-5 text-white">Latest Reviews</h1>
+</div>
+<section class="pt-2">
+  <div class="owl-carousel owl-theme">
+    {% for i in reviews  %}
+    <div class="c-item">
+      <a href="{{url_for('review_show', review_id=i._id)}}">
+        <div class="img-view"><img src="{{ i.link }}" /></div>
+        <div class="content">
+          <div class="content-column w-100 px-2">
+            {{ i.title }}
+          </div>
+          <div class="content-column mt-2">
+            <div class="d-flex">
+              <i class="fa fa-star fa-fw mr-2 my-auto"></i>
+              <div class="my-auto">{{ i.star }}/10</div>
+            </div>
+          </div>
+          <div class="content-column mt-2">
+            <form method="get" action="{{url_for('review_show', review_id=i._id)}}">
+              <button type="submit">Read Review</button>
+            </form>
+          </div>
+        </div>
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% endblock content %}
+
+{% block script %}
+
+<script src="/static/js/home.js"></script>
+
+{% endblock script %}
