@@ -109,3 +109,17 @@ def account():
         profile_image=image_file,
         check=check,
     )
+
+
+@app.route("/logout")
+def logout():
+    session.clear()
+    return redirect(url_for("home"))
+
+
+@app.route("/file/<filename>")
+def file(filename):
+    return mongo.send_file(filename)
+    
+    
+    
