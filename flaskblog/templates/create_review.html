@@ -1,0 +1,109 @@
+{% extends "layout.html" %} {% block content %}
+
+<div class="row row d-flex justify-content-center my-review">
+  <div class="col-md-8">
+
+    <div class="content-section">
+      <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <fieldset class="form-group">
+          <legend class="border-bottom mb-4">Enter Your Review</legend>
+          <div class="form-group">
+            {{ form.title.label(class="form-control-label") }} {% if
+        form.title.errors %} {{ form.title(class="form-control form-control-lg
+        is-invalid") }}
+            <div class="invalid-feedback">
+              {% for error in form.title.errors %}
+              <span>{{ error }}</span>
+              {% endfor %}
+            </div>
+            {% else %} {{ form.title(class="form-control form-control-lg") }} {%
+        endif %}
+          </div>
+          <div class="form-group">
+            {{ form.content.label(class="form-control-label") }} {% if
+        form.content.errors %} {{ form.content(class="form-control
+        form-control-lg is-invalid") }}
+            <div class="invalid-feedback">
+              {% for error in form.content.errors %}
+              <span>{{ error }}</span>
+              {% endfor %}
+            </div>
+            {% else %} {{ form.content(class="form-control form-control-lg") }} 
+            {% endif %}
+          </div>
+
+          <div class="form-group">
+            {{ form.link.label(class="form-control-label") }} {% if form.link.errors
+        %} {{ form.link(class="form-control form-control-lg is-invalid") }}
+            <div class="invalid-feedback">
+              {% for error in form.link.errors %}
+              <span>{{ error }}</span>
+              {% endfor %}
+            </div>
+            {% else %} {{ form.link(class="form-control form-control-lg") }}
+            {% endif %}
+          </div>
+
+          <div class="form-group">
+            {{ form.review.label(class="form-control-label") }} {% if
+        form.review.errors %} {{ form.review(class="form-control form-control-lg
+        is-invalid") }}
+            <div class="invalid-feedback">
+              {% for error in form.review.errors %}
+              <span>{{ error }}</span>
+              {% endfor %}
+            </div>
+            {% else %} {{ form.review(class="form-control form-control-lg") }} {%
+        endif %}
+          </div>
+          <section class="rating-widget">
+            <div class="rating-stars text-center">
+              <ul id="stars">
+                <li class="star" data-value="1" value="1">
+                  <i class="fa fa-star fa-fw"></i>
+                </li>
+                <li class="star" data-value="2" value="2">
+                  <i class="fa fa-star fa-fw"></i>
+                </li>
+                <li class="star" data-value="3" value="3">
+                  <i class="fa fa-star fa-fw"></i>
+                </li>
+                <li class="star" data-value="4" value="4">
+                  <i class="fa fa-star fa-fw"></i>
+                </li>
+                <li class="star" data-value="5" value="5">
+                  <i class="fa fa-star fa-fw"></i>
+                </li>
+                <li class="star" data-value="6" value="6">
+                  <i class="fa fa-star fa-fw"></i>
+                </li>
+                <li class="star" data-value="7" value="7">
+                  <i class="fa fa-star fa-fw"></i>
+                </li>
+                <li class="star" data-value="8" value="8">
+                  <i class="fa fa-star fa-fw"></i>
+                </li>
+                <li class="star" data-value="9" value="9">
+                  <i class="fa fa-star fa-fw"></i>
+                </li>
+                <li class="star" data-value="10" value="10">
+                  <i class="fa fa-star fa-fw"></i>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <input id="star" name="star" type="text" hidden />
+        </fieldset>
+        <div class="form-group">
+          {{ form.submit(class="btn btn-dark", style="width:100%;") }}
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="/static/js/create_review.js"></script>
+
+{% endblock content %}

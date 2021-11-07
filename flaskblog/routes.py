@@ -120,6 +120,29 @@ def logout():
 @app.route("/file/<filename>")
 def file(filename):
     return mongo.send_file(filename)
-    
-    
-    
+
+
+@app.route("/give-review", methods=["GET", "POST"])
+def new_review():
+    check = 0
+    if "username" in session:
+        check = 1
+    form = PostForm()
+    reviews = mongo.db.reviews
+    if form.validate_on_submit():
+        reviews.insert(
+            {
+                "title": form.title.data,
+                "link": form.link.data,
+                "review": form.review.data,
+                "content": form.content.data,
+                "star": request.form["star"],
+                "author": session["username"],
+                "created_at": str(datetime.now().date()),
+            }
+        )
+        flash("Your post has been created!", "success")
+        return redirect(url_for("home"))
+    return render_template(
+        "create_review.html", title="New Review", form=form, check=check
+    )
