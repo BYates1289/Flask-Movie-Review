@@ -109,3 +109,8 @@ div.c-item > a > div.content > div.content-column > form > button:focus {
 footer {
     margin-top: auto;
 }
+.account-img {
+    height: 125px;
+    width: 125px;
+    margin: 0 20px 16px 0;
+}
