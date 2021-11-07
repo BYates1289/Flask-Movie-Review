@@ -114,3 +114,31 @@ footer {
     width: 125px;
     margin: 0 20px 16px 0;
 }
+.rating-stars ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  .rating-stars ul>li.star {
+    display: inline-block;
+  }
+  .rating-stars ul>li.star>i.fa {
+    font-size: 2.5em;
+    color: #ccc;
+  }
+  .rating-stars ul>li.star:hover>i.fa {
+    transform: rotate(-15deg) scale(1.3);
+  }
+  .rating-stars ul>li.star.selected>i.fa {
+    color: gold;
+  }
+  .rating-stars ul>li.star.selected.first>i.fa {
+    color: #f62;
+  }
+  .rating-stars ul>li.star.selected-all>i.fa {
+    color: gold;
+    text-shadow: 0 0 20px #952;
+  }
+  .fa-star, .stars {
+    color: gold;
+    font-size: 25px;
+  }
