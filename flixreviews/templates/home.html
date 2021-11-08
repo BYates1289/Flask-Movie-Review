@@ -15,7 +15,7 @@
     {% for i in reviews  %}
     <div class="c-item">
       <a href="{{url_for('review_show', review_id=i._id)}}">
-        <div class="img-view"><img src="{{ i.link }}" /></div>
+        <div class="img-view"><img src="{{ i.link }}" alt="Movie Poster" /></div>
         <div class="content">
           <div class="content-column w-100 px-2">
             {{ i.title }}
