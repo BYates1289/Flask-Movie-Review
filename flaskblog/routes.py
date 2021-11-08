@@ -156,3 +156,11 @@ def reviews():
         user = session["username"]
     reviews = mongo.db["reviews"].find({})
     return render_template("reviews.html", reviews=reviews, check=check, user=user)
+
+
+@app.route("/review_delete/<string:review_id>", methods=["Post"])
+def review_delete(review_id):
+    reviews = mongo.db.reviews
+    delete = reviews.delete_one({"_id": ObjectId(review_id)})
+    flash("Your review has been deleted!", "success")
+    return redirect(url_for("reviews"))
