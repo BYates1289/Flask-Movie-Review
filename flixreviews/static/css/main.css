@@ -151,4 +151,10 @@
      div.c-item > a > div.img-view > img {
          height: 490px;
     }
+    .mobile-center {
+        text-align: center !important;
+    }
+    .stars {
+        font-size: 18px;
+    }
 }

@@ -12,7 +12,7 @@
                                 <div class="p-3 border-bottom">
                                     <h5>{{ review.title }} </h5>
                                     <p>{{ review.review }} </p>
-                                    <div class="stars">
+                                    <div class="stars mobile-center">
                                         {% for i in review.star|ran %}
                                         <span class="fa fa-star checked"></span>
                                         {% endfor %}
@@ -23,20 +23,20 @@
                                                 <ul class="list-group list-group-flush">
                                                     <li class="list-group-item">
                                                         <div class="row align-items-center">
-                                                            <p class="col-md-4">
+                                                            <p class="col-md-4 mobile-center">
                                                                 Reviewed by:
                                                             </p>
-                                                            <p class="col-md-8 text-right">
+                                                            <p class="col-md-8 text-right mobile-center">
                                                                 {{ review.author }}
                                                             </p>
                                                         </div>
                                                     </li>
                                                     <li class="list-group-item">
                                                         <div class="row align-items-center">
-                                                            <p class="col-md-4">
+                                                            <p class="col-md-4 mobile-center">
                                                                 Date:
                                                             </p>
-                                                            <p class="col-md-8 text-right">
+                                                            <p class="col-md-8 text-right mobile-center">
                                                                 {{ review.created_at }}
                                                             </p>
                                                         </div>
