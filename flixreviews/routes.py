@@ -1,11 +1,11 @@
 from datetime import datetime
 import os
 import secrets
-from flaskblog import app, mongo
+from flixreviews import app, mongo
 from PIL import Image
 from flask import render_template, url_for, flash, redirect, request, abort, session
 from flask_login import login_user, current_user, logout_user, login_required
-from flaskblog.forms import RegistrationForm, LoginForm, UpdateAccountForm, PostForm
+from flixreviews.forms import RegistrationForm, LoginForm, UpdateAccountForm, PostForm
 import bcrypt
 from bson import ObjectId
 

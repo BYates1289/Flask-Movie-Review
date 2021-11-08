@@ -22,4 +22,4 @@ def load_user(user_id):
     users = mongo.db.users
     return users.find_one({'id': user_id})
 
-from flaskblog import routes
+from flixreviews import routes
