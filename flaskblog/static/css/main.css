@@ -1,151 +1,150 @@
 @import url(https://fonts.googleapis.com/css2?family=Poppins&display=swap);
-body {
-    background-image: url(/static/img/background.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: #000;
-    font-family: Poppins, sans-serif;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+ body {
+     background-image: url(/static/img/background.jpg);
+     background-position: center;
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     color: #000;
+     font-family: Poppins, sans-serif;
+     min-height: 100vh;
+     display: flex;
+     flex-direction: column;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: #000;
+ h1, h2, h3, h4, h5, h6 {
+     color: #000;
 }
-h1 {
-  font-size: 30px;
+ h1 {
+     font-size: 30px;
 }
-.navbar-brand img {
-    width: 60px;
-    height: auto;
+ .navbar-brand img {
+     width: 60px;
+     height: auto;
 }
-.navbar {
-    width: 100%;
+ .navbar {
+     width: 100%;
 }
-.site-header .navbar-nav .nav-link {
-    color: #cbd5db;
+ .site-header .navbar-nav .nav-link {
+     color: #cbd5db;
 }
-.site-header .navbar-nav .nav-link:hover {
-    color: #fff;
+ .site-header .navbar-nav .nav-link:hover {
+     color: #fff;
 }
-.account,
-.my-review,
-.login,
-.register {
-    margin-top:40px;
+ .account, .my-review, .login, .register {
+     margin-top:40px;
 }
-.fa-star, .stars {
-    color: gold;
-    font-size: 25px;
+ .fa-star, .stars {
+     color: gold;
+     font-size: 25px;
 }
-div.c-item {
-    width: 100%;
-    margin: 0 auto !important;
+ div.c-item {
+     width: 100%;
+     margin: 0 auto !important;
 }
-div.c-item > a > div.img-view {
-    width: 100%;
+ div.c-item > a > div.img-view {
+     width: 100%;
 }
-div.c-item > a > div.img-view > img {
-    width: 100%;
-    height: 350px;
-    object-fit: fit;
-    box-shadow: 0 0 8px 0 #fff;
-    border-radius: 10px;
-    margin-top: 8px;
+ div.c-item > a > div.img-view > img {
+     width: 100%;
+     height: 350px;
+     object-fit: fit;
+     box-shadow: 0 0 8px 0 #fff;
+     border-radius: 10px;
+     margin-top: 8px;
 }
-div.c-item > a > div.content {
-    display: inline-block;
-    width: 100%;
-    margin-top: 15px;
+ div.c-item > a > div.content {
+     display: inline-block;
+     width: 100%;
+     margin-top: 15px;
 }
-div.c-item > a > div.content > div.content-column {
-    color: #fff;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+ div.c-item > a > div.content > div.content-column {
+     color: #fff;
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
 }
-div.c-item > a > div.content > div.content-column:last-child {
-    margin-left: auto;
+ div.c-item > a > div.content > div.content-column:last-child {
+     margin-left: auto;
 }
-div.c-item > a > div.content > div.content-column > form > button {
-    width: 100%;
-    height: 30px;
-    color: #fff;
-    padding: 0 10px !important;
-    border: none;
-    border-radius: 30px;
-    background-color: #b81f1f;
+ div.c-item > a > div.content > div.content-column > form > button {
+     width: 100%;
+     height: 30px;
+     color: #fff;
+     padding: 0 10px !important;
+     border: none;
+     border-radius: 30px;
+     background-color: #b81f1f;
 }
-div.c-item > a > div.content > div.content-column > form > button:focus {
-    outline: 0;
+ div.c-item > a > div.content > div.content-column > form > button:focus {
+     outline: 0;
 }
-.owl-nav button:hover {
-  background-color: transparent !important;
+ .owl-nav button:hover {
+     background-color: transparent !important;
 }
-.owl-prev:hover, .owl-next:hover {
-  outline: none !important;
-  background: transparent !important;
+ .owl-prev:hover, .owl-next:hover {
+     outline: none !important;
+     background: transparent !important;
 }
-.owl-prev:focus, .owl-next:focus {
-  outline: none !important;
-  background: transparent !important;
+ .owl-prev:focus, .owl-next:focus {
+     outline: none !important;
+     background: transparent !important;
 }
-.owl-prev span,
-.owl-next span {
-  font-size: 90px;
-  color: #428bca;
-  cursor: pointer;
+ .owl-prev span, .owl-next span {
+     font-size: 90px;
+     color: #428bca;
+     cursor: pointer;
 }
-.owl-theme .owl-nav {
-    margin-top: -30px !important;
+ .owl-theme .owl-nav {
+     margin-top: -30px !important;
 }
-footer {
-    margin-top: auto;
+ footer {
+     margin-top: auto;
 }
-.account-img {
-    height: 125px;
-    width: 125px;
-    margin: 0 20px 16px 0;
+ .account-img {
+     height: 125px;
+     width: 125px;
+     margin: 0 20px 16px 0;
 }
-.content-section {
-  background: #fff;
-  padding: 10px 20px;
-  border: 1px solid #ddd;
-  border-radius: 3px;
-  margin-bottom: 20px;
+ .content-section {
+     background: #fff;
+     padding: 10px 20px;
+     border: 1px solid #ddd;
+     border-radius: 3px;
+     margin-bottom: 20px;
 }
-.rating-stars ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  .rating-stars ul>li.star {
-    display: inline-block;
-  }
-  .rating-stars ul>li.star>i.fa {
-    font-size: 2.5em;
-    color: #ccc;
-  }
-  .rating-stars ul>li.star:hover>i.fa {
-    transform: rotate(-15deg) scale(1.3);
-  }
-  .rating-stars ul>li.star.selected>i.fa {
-    color: gold;
-  }
-  .rating-stars ul>li.star.selected.first>i.fa {
-    color: #f62;
-  }
-  .rating-stars ul>li.star.selected-all>i.fa {
-    color: gold;
-    text-shadow: 0 0 20px #952;
-  }
-  .fa-star, .stars {
-    color: gold;
-    font-size: 25px;
-  }
+ .rating-stars ul {
+     list-style-type: none;
+     padding: 0;
+}
+ .rating-stars ul>li.star {
+     display: inline-block;
+}
+ .rating-stars ul>li.star>i.fa {
+     font-size: 2.5em;
+     color: #ccc;
+}
+ .rating-stars ul>li.star:hover>i.fa {
+     transform: rotate(-15deg) scale(1.3);
+}
+ .rating-stars ul>li.star.selected>i.fa {
+     color: gold;
+}
+ .rating-stars ul>li.star.selected.first>i.fa {
+     color: #f62;
+}
+ .rating-stars ul>li.star.selected-all>i.fa {
+     color: gold;
+     text-shadow: 0 0 20px #952;
+}
+ .fa-star, .stars {
+     color: gold;
+     font-size: 25px;
+}
+ @media screen and (max-width: 400px) {
+     .container h1 {
+         font-size: 25px;
+    }
+     div.c-item > a > div.img-view > img {
+         height: 490px;
+    }
+}
