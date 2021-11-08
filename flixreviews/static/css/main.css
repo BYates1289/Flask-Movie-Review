@@ -149,12 +149,15 @@
          font-size: 25px;
     }
      div.c-item > a > div.img-view > img {
-         height: 490px;
+         height: 420px;
     }
     .mobile-center {
         text-align: center !important;
     }
     .stars {
         font-size: 18px;
+    }
+    .movie-info p {
+        font-size: 14px;
     }
 }
