@@ -69,3 +69,12 @@ class UpdateAccountForm(FlaskForm):
                 raise ValidationError(
                     "That email is taken. Please choose a different one."
                 )
+
+
+class PostForm(FlaskForm):
+    title = StringField("Movie Name", validators=[DataRequired()])
+    link = TextAreaField("Movie Poster URL", validators=[DataRequired()])
+    review = TextAreaField("Movie Review")
+    content = TextAreaField("Movie Description", validators=[DataRequired()])
+
+    submit = SubmitField("Post")

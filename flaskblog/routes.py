@@ -146,3 +146,13 @@ def new_review():
     return render_template(
         "create_review.html", title="New Review", form=form, check=check
     )
+
+
+@app.route("/reviews")
+def reviews():
+    check = 0
+    if "username" in session:
+        check = 1
+        user = session["username"]
+    reviews = mongo.db["reviews"].find({})
+    return render_template("reviews.html", reviews=reviews, check=check, user=user)
