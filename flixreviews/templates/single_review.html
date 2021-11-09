@@ -1,62 +1,60 @@
 {% extends "layout.html" %}
 {% block content %}
-
 <div class="row row d-flex justify-content-center">
-    <div class="col-md-10">
-        <section class="py-4">
-            <div class="container mt-3">
-                <div class="row justify-content-center">
-                    <div class="col-12">
-                        <div class="bg-white rounded shadow-sm sidebar-page-right c">
-                            <div>
-                                <div class="p-3 movie-info">
-                                    <h5 class="mobile-center font-weight-bold">{{ review.title }} </h5>
-                                    <p>{{ review.review }} </p>
-                                    <div class="stars mobile-center">
-                                        {% for i in review.star|ran %}
-                                        <span class="fa fa-star checked"></span>
-                                        {% endfor %}
-                                    </div>
-                                    <div class="row d-flex align-items-center form-group mt-3">
-                                        <div class="col-md-6">
-                                            <div class="card w-100">
-                                                <ul class="list-group list-group-flush">
-                                                    <li class="list-group-item">
-                                                        <div class="row align-items-center">
-                                                            <p class="col-md-4 mobile-center">
-                                                                Reviewed by:
-                                                            </p>
-                                                            <p class="col-md-8 text-right mobile-center">
-                                                                {{ review.author }}
-                                                            </p>
-                                                        </div>
-                                                    </li>
-                                                    <li class="list-group-item">
-                                                        <div class="row align-items-center">
-                                                            <p class="col-md-4 mobile-center">
-                                                                Date:
-                                                            </p>
-                                                            <p class="col-md-8 text-right mobile-center">
-                                                                {{ review.created_at }}
-                                                            </p>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <img class="img-fluid img-large" src=" {{ review.link }} " alt="Movie Poster">
-                                        </div>
-                                    </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
+	<div class="col-md-10">
+		<section class="py-4">
+			<div class="container mt-3">
+				<div class="row justify-content-center">
+					<div class="col-12">
+						<div class="bg-white rounded shadow-sm sidebar-page-right c">
+							<div>
+								<div class="p-3 movie-info">
+									<h5 class="mobile-center font-weight-bold">{{ review.title }} </h5>
+									<p>{{ review.review }} </p>
+									<div class="stars mobile-center">
+										{% for i in review.star|ran %}
+										<span class="fa fa-star checked"></span>
+										{% endfor %}
+									</div>
+									<div class="row d-flex align-items-center form-group mt-3">
+										<div class="col-md-6">
+											<div class="card w-100">
+												<ul class="list-group list-group-flush">
+													<li class="list-group-item">
+														<div class="row align-items-center">
+															<p class="col-md-4 mobile-center">
+																Reviewed by:
+															</p>
+															<p class="col-md-8 text-right mobile-center">
+																{{ review.author }}
+															</p>
+														</div>
+													</li>
+													<li class="list-group-item">
+														<div class="row align-items-center">
+															<p class="col-md-4 mobile-center">
+																Date:
+															</p>
+															<p class="col-md-8 text-right mobile-center">
+																{{ review.created_at }}
+															</p>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<img class="img-fluid img-large" src=" {{ review.link }} " alt="Movie Poster">
+										</div>
+									</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
 </div>
-
 {% endblock content %}

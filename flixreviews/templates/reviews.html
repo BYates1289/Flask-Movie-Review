@@ -1,69 +1,64 @@
 {% extends "layout.html" %}
 {% block content %}
-
 <div class="row row d-flex justify-content-center">
-    <div class="col-md-10">
-        <section class="py-4">
-
-            {% for i in reviews %}
-            <div class="container mt-3">
-                <div class="row justify-content-center">
-                    <div class="col-12">
-                        <div class="bg-white rounded">
-                            <div>
-                                <div class="p-3">
-                                    <h5>{{ i.title }} </h5>
-                                    <p>{{i.review}} </p>
-                                    <div class="stars">
-                                        {% for i in i.star|ran %}
-                                        <span class="fa fa-star checked"></span>
-                                        {% endfor %}
-                                    </div>
-                                    <div class="row d-flex align-items-center form-group mt-3">
-                                        <div class="col-md-6">
-                                            <div class="card w-100">
-                                                <ul class="list-group list-group-flush">
-                                                    <li class="list-group-item">
-                                                        <div class="row align-items-center">
-                                                            <p class="col-md-4">Reviewed by:</p>
-                                                            <p class="col-md-8 text-right">{{ i.author }}</p>
-                                                        </div>
-                                                    </li>
-                                                    <li class="list-group-item">
-                                                        <div class="row align-items-center">
-                                                            <p class="col-md-4">Date:</p>
-                                                            <p class="col-md-8 text-right">{{ i.created_at }}</p>
-                                                        </div>
-                                                    </li>
-
-                                                    {% if check==1 and user==i.author %}
-                                                    <li class="list-group-item">
-                                                        <div class="row align-items-center">
-                                                            <div class="col-md-12">
-                                                                <form method="post" action="{{url_for('review_delete', review_id=i._id)}}">
-                                                                    <button type="submit" class="btn btn-danger w-100">Delete</button>
-                                                                </form>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    {% endif %}
-
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <img class="img-fluid img-large" src=" {{i.link}} " alt="Movie Poster">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </section>
-    </div>
+	<div class="col-md-10">
+		<section class="py-4">
+			{% for i in reviews %}
+			<div class="container mt-3">
+				<div class="row justify-content-center">
+					<div class="col-12">
+						<div class="bg-white rounded">
+							<div>
+								<div class="p-3">
+									<h5>{{ i.title }} </h5>
+									<p>{{i.review}} </p>
+									<div class="stars">
+										{% for i in i.star|ran %}
+										<span class="fa fa-star checked"></span>
+										{% endfor %}
+									</div>
+									<div class="row d-flex align-items-center form-group mt-3">
+										<div class="col-md-6">
+											<div class="card w-100">
+												<ul class="list-group list-group-flush">
+													<li class="list-group-item">
+														<div class="row align-items-center">
+															<p class="col-md-4">Reviewed by:</p>
+															<p class="col-md-8 text-right">{{ i.author }}</p>
+														</div>
+													</li>
+													<li class="list-group-item">
+														<div class="row align-items-center">
+															<p class="col-md-4">Date:</p>
+															<p class="col-md-8 text-right">{{ i.created_at }}</p>
+														</div>
+													</li>
+													{% if check==1 and user==i.author %}
+													<li class="list-group-item">
+														<div class="row align-items-center">
+															<div class="col-md-12">
+																<form method="post" action="{{url_for('review_delete', review_id=i._id)}}">
+																	<button type="submit" class="btn btn-danger w-100">Delete</button>
+																</form>
+															</div>
+														</div>
+													</li>
+													{% endif %}
+												</ul>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<img class="img-fluid img-large" src=" {{i.link}} " alt="Movie Poster">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+		</section>
+	</div>
 </div>
-
 {% endblock content %}

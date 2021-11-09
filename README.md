@@ -1,4 +1,4 @@
-<h1><strong>Hi-Lo Card Game</strong></h1>
+<h1><strong>Flix Reviews</strong></h1>
 <img src="./assets/img/testing/AmIResponsive.jpg" style="max-width: 100%">
 <h1>Product Description</h1>
 <p>My Milestone 2 Project for Code Institute is a Higher or Lower card game in which you have to decide whether the next card will be higher or lower than the last. There is betting feature which is used to increase your Wallet Total, which is what is used as your score at the end of the game. It is designed to be simplistic and engaging.</p>
