@@ -1,8 +1,8 @@
 <h1><strong>Flix Reviews</strong></h1>
-<img src="./assets/img/testing/AmIResponsive.jpg" style="max-width: 100%">
+<img src="/static/img/air.png" style="max-width: 100%">
 <h1>Product Description</h1>
-<p>My Milestone 2 Project for Code Institute is a Higher or Lower card game in which you have to decide whether the next card will be higher or lower than the last. There is betting feature which is used to increase your Wallet Total, which is what is used as your score at the end of the game. It is designed to be simplistic and engaging.</p>
-<p>View the live project <a href="https://byates1289.github.io/Hi-Lo-MS2">here.</a></p>
+<p>My Milestone 3 project for the Code Institute, is a Movie Review site, where registered users can submit a review of their favourite movies.</p>
+<p>The project has been deployed to Heroku and can been seen <a href="https://movie-review-ms3.herokuapp.com/">here.</a></p>
 <h1>Table of Contents</h1>
 <ul>
     <li><a href="#user-experience">User Experience (UX)</a></li>
@@ -68,7 +68,7 @@
                 </ul>
             <li id ="typography">Typography</li>
                 <ul>
-                    <li>The Poppins font is the main font used throughout this project with Sans-Serif as the fallback font in case for any reason the font isn't being imported into the site correctly.</li>
+                    <li>The Poppins font is the main font used throughout this project with Sans-Serif as the fallback in case for any reason the font isn't being imported into the site correctly.</li>
                 </ul>
             <li id="imagery">Imagery</li>
                 <ul>
