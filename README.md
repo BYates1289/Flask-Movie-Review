@@ -1,5 +1,5 @@
 <h1><strong>Flix Reviews</strong></h1>
-<img src="/static/img/air.png" style="max-width: 100%">
+<img src="https://github.com/BYates1289/Flask-Movie-Review-Project-MS3/blob/main/flixreviews/static/img/air.png?raw=true">
 <h1>Product Description</h1>
 <p>My Milestone 3 project for the Code Institute, is a Movie Review site, where registered users can submit a review of their favourite movies.</p>
 <p>The project has been deployed to Heroku and can been seen <a href="https://movie-review-ms3.herokuapp.com/">here.</a></p>
@@ -76,7 +76,7 @@
                 </ul>
             <li id="wireframes">Wireframes</li>
                 <ul>
-                    <li>Project Wireframe - <a href="https://github.com/BYates1289/Hi-Lo-MS2/blob/master/assets/docs/Wireframe.pdf">View</a></li>
+                    <li>Project Wireframe - <a href="https://github.com/BYates1289/Flask-Movie-Review-Project-MS3/blob/main/flixreviews/static/docs/wireframes.pdf">View</a></li>
                 </ul>
             </li>
         </ul>
@@ -111,6 +111,14 @@
         <ul>
             <li>Bootstrap was used to assist with the responsiveness and styling of the website.</li>
         </ul>
+    <li><a href="https://flask.palletsprojects.com/en/2.0.x/">Flask</a></li>
+        <ul>
+            <li>Backend Python micro-framework.</li>
+        </ul>
+    <li><a href="https://www.mongodb.com/">MongoDB</a></li>
+        <ul>
+            <li>NoSQL database that is used to store data.</li>
+        </ul>
     <li><a href="https://fonts.google.com/">Google Fonts</a></li>
         <ul>
             <li>Google Fonts was used to import the 'Croissant One' and 'Roboto' fonts into my project. 'Croissant One' was used for the majority of body text, whilst 'Roboto' was used for the rules modal and alert popup.</li>
@@ -123,9 +131,13 @@
         <ul>
             <li>jQuery is a dependency of the Bootstrap framework and helps with responsive design.</li>
         </ul>
-    <li><a href="https://sweetalert2.github.io/">Owl-Carousel</a></li>
+    <li><a href="https://owlcarousel2.github.io/OwlCarousel2/">Owl-Carousel</a></li>
         <ul>
-            <li>A touch enabled jQuery plugin that lets you create a beautiful responsive carousel slider.</li>
+            <li>Used to create a touch enabled, respsonsive carousel slider.</li>
+        </ul>
+    <li><a href="https://code.visualstudio.com/">VS Code</a></li>
+        <ul>
+            <li>The Code Editor used for this project.</li>
         </ul>
     <li><a href="https://git-scm.com/">Git</a></li>
         <ul>
@@ -146,10 +158,6 @@
     <li><a href="https://developer.chrome.com/docs/devtools/">Chrome DevTools</a></li>
         <ul>
             <li>Absolutely essential tool for debugging code.</li>
-        </ul>
-        <li><a href="https://code.visualstudio.com/">VS Code</a></li>
-        <ul>
-            <li>Used for testing offline, when internet connectivity wasn't always available due to travel.</li>
         </ul>
 </ol>
 <h2 id="testing">Testing</h2>
