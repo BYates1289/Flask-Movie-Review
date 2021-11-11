@@ -21,3 +21,4 @@ $('.owl-carousel').owlCarousel({
       }
     }
   });
+  $(".owl-dot").attr('aria-label',"slide-dot");

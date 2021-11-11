@@ -30,10 +30,9 @@
         </ul>
     <li><a href="#further-testing">Further Testing</a></li>
     <li><a href="#features-to-implement">Features Left To Implement
-    <li><a href="#known-bugs">Known Bugs</a></li>
     <li><a href="#deployment">Deployment</a></li>
         <ul>
-            <li><a href="#github-pages">GitHub Pages</a></li>
+            <li><a href="#heroku">Heroku</a></li>
             <li><a href="#forking-repo">Forking the GitHub Repository</a></li>
             <li><a href="#making-local-clone">Making a Local Clone</a></li>
         </ul>
@@ -236,58 +235,15 @@
 </ul>
 <h3 id="features-to-implement">Features Left To Implement</h3>
 <ul>
-    <li>I will improve UX by adding a flip animation to the next card.</li>
-    <li>I will add a card countdown so that users can see how many cards are left to be dealt.</li>
-    <li>I would eventually like to add a global high score leaderboard, so users can compare their high-scores.</li>
-    <li>Ensure compatibility for IE11.</li>
-</ul>
-<h3 id="known-bugs">Known Bugs</h3>
-<ul>
-    <li>Starting a new game refreshes the page causing the Rules modal to reappear.</li>
-    <li>Site does not display correctly within Internet Explorer 11.</li>
+    <li>I would love to implement the <a href="https://www.themoviedb.org/documentation/api">TMDB</a> API so that users can search via the API for their movie review. This would pull the movie posters into the application too.</li>
 </ul>
 <h2 id="deployment">Deployment</h2>
-<h3 id="github-pages">GitHub Pages</h3>
-<p>The project was deployed to GitHub Pages using the following steps...</p>
-<ol>
-    <li>Log in to GitHub and locate the GitHub Repository.</li>
-    <li>At the top of the Repository (not top of page), locate the "Settings" Button on the menu.</li>
-    <li>Scroll down the Settings page until you locate the "GitHub Pages" Section.</li>
-    <li>Under "Source", click the dropdown called "None" and select "Master Branch"</li>
-    <li>The page will automatically refresh.</li>
-    <li>Scroll back down through the page to locate the now published site link in the "GitHub Pages" section.</li>
-</ol>
-<h3 id="forking-repo">Forking the GitHub Repository</h3>
-<p>By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...</p>
-<ol>
-    <li>Log in to GitHub and locate the GitHub Repository.</li>
-    <li>At the top of the Repository, just above the "Settings" Button on the menu, locate the "Fork" Button.</li>
-    <li>You should now have a copy of the original repository in your GitHub account.</li>
-</ol>
-<h3 id="making-local-clone">Making a Local Clone</h3>
-<ol>
-    <li>Log in to GitHub and locate the GitHub Repository.</li>
-    <li>Under the repository name, click "Clone or download"</li>
-    <li>To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.</li>
-    <li>Open Git Bash.</li>
-    <li>Change the current working directory to the location where you want the cloned directory to be made.</li>
-    <li>Type <code>git clone</code>, and then paste the URL you copied in Step 3.</li><br>
-    <div class="snippet-clipboard-content position-relative"><pre><code>$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY</pre></code></div>
-    <li>Press Enter. Your local clone will be created.</li><br>
-    <div class="snippet-clipboard-content position-relative">    
-    <pre><code>$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY    
-> Cloning into `CI-Clone`...
-> remote: Counting objects: 10, done.
-> remote: Compressing objects: 100% (8/8), done.
-> remove: Total 10 (delta 1), reused 10 (delta 1)
-> Unpacking objects: 100% (10/10), done.</pre></code></div>
-</ol>
-<p>Click <a href="https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository#cloning-a-repository-to-github-desktop">here</a> to retrieve pictures for some of the buttons and more detailed explanations of the above process.</p>
-<h3>Heroku</h3>
+<h3 id="heroku">Heroku</h3>
 <p>To deploy this project to Heroku, the following steps were taken...</p>
 <ol>
     <li>From the VS Code terminal, I created requirements.txt and Procfile using the following commands:</li><br>
-    <div class="snippet-clipboard-content position-relative"><pre><code>pip3 freeze --local > requirements.txt<br>echo web: python run.py > Procfile</pre></code></div>
+    <div class="snippet-clipboard-content position-relative"><pre><code>pip3 freeze --local > requirements.txt</pre></code></div>
+    <div class="snippet-clipboard-content position-relative"><pre><code>echo web: python run.py > Procfile</pre></code></div>
     <li>I then committed these files to GitHub</li>
     <li>Next, I logged into my Heroku account and created a new app named "movie-review-ms3".</li>
     <li>I then located the <b>Deploy</b> tab and selected <b>GitHub</b> as the Deployment Method.</li>
@@ -328,6 +284,32 @@
     <li>I then ensured the "main" branch was selected under Manual Deploy, and clicked the <b>Deploy Branch</b> button.</li>
     <li>Shortly after, you will get a message informing you that your site has been deployed sucessfully.</li>
 
+<h3 id="forking-repo">Forking the GitHub Repository</h3>
+<p>By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...</p>
+<ol>
+    <li>Log in to GitHub and locate the GitHub Repository.</li>
+    <li>At the top of the Repository, just above the "Settings" Button on the menu, locate the "Fork" Button.</li>
+    <li>You should now have a copy of the original repository in your GitHub account.</li>
+</ol>
+<h3 id="making-local-clone">Making a Local Clone</h3>
+<ol>
+    <li>Log in to GitHub and locate the GitHub Repository.</li>
+    <li>Under the repository name, click "Clone or download"</li>
+    <li>To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.</li>
+    <li>Open Git Bash.</li>
+    <li>Change the current working directory to the location where you want the cloned directory to be made.</li>
+    <li>Type <code>git clone</code>, and then paste the URL you copied in Step 3.</li><br>
+    <div class="snippet-clipboard-content position-relative"><pre><code>$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY</pre></code></div>
+    <li>Press Enter. Your local clone will be created.</li><br>
+    <div class="snippet-clipboard-content position-relative">    
+    <pre><code>$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY    
+> Cloning into `CI-Clone`...
+> remote: Counting objects: 10, done.
+> remote: Compressing objects: 100% (8/8), done.
+> remove: Total 10 (delta 1), reused 10 (delta 1)
+> Unpacking objects: 100% (10/10), done.</pre></code></div>
+</ol>
+<p>Click <a href="https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository#cloning-a-repository-to-github-desktop">here</a> to retrieve pictures for some of the buttons and more detailed explanations of the above process.</p>
 <h2 id="credits">Credits</h2>
 <h3 id="code">Code</h3>
 <ul>
