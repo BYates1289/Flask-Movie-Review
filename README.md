@@ -52,7 +52,7 @@
                 <ol type="a">
                     <li>As a First Time Visitor, I want to see which movies people rate highly.</li>
                     <li>As a First Time Visitor, I want to read reviews about movies I have not seen.</li>
-                    <li>As a First Time Visitor, I want to submit my own review.</li>
+                    <li>As a First Time Visitor, I create an account and submit my own review.</li>
                 </ol>
             <li id="returning-visitor">Returning Visitor Goals</li>
                 <ol type="a">
@@ -193,9 +193,8 @@
     <li><a href="https://github.com/BYates1289/Hi-Lo-MS2/blob/master/assets/img/testing/iPhoneX.JPG">iPhone X</a></li>
     <li><a href="https://github.com/BYates1289/Hi-Lo-MS2/blob/master/assets/img/testing/iPhone%208%20Plus.JPG">iPhone 8 Plus</a></li>
     <li><a href="https://github.com/BYates1289/Hi-Lo-MS2/blob/master/assets/img/testing/iPhone%20SE.JPG">iPhone SE</a></li>
-    <li><a href="https://github.com/BYates1289/Hi-Lo-MS2/blob/master/assets/img/testing/Pixel%203%20XL.JPG">Pixel 3 XL</a></li>
-    <li><a href="https://github.com/BYates1289/Hi-Lo-MS2/blob/master/assets/img/testing/Galaxy%20S9%20Plus.JPG">Galaxy S9 Plus</a></li>
-    <li><a href="https://github.com/BYates1289/Hi-Lo-MS2/blob/master/assets/img/testing/Galaxy%20Note%2010.JPG">Galaxy Note 10</a></li>
+    <li><a href="https://github.com/BYates1289/Hi-Lo-MS2/blob/master/assets/img/testing/Pixel%203%20XL.JPG">Pixel 2 XL</a></li>
+    <li><a href="https://github.com/BYates1289/Hi-Lo-MS2/blob/master/assets/img/testing/Galaxy%20Note%2010.JPG">Galaxy Note 3</a></li>
     <li><a href="https://github.com/BYates1289/Hi-Lo-MS2/blob/master/assets/img/testing/iPad%20Pro.JPG">iPad Pro</a></li>
     <li><a href="https://github.com/BYates1289/Hi-Lo-MS2/blob/master/assets/img/testing/iPad%20Mini.JPG">iPad Mini</a></li>
     <li><a href="https://github.com/BYates1289/Hi-Lo-MS2/blob/master/assets/img/testing/Galaxy%20Tab%20S4.JPG">Galaxy Tab S4</a></li>
@@ -284,12 +283,56 @@
 > Unpacking objects: 100% (10/10), done.</pre></code></div>
 </ol>
 <p>Click <a href="https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository#cloning-a-repository-to-github-desktop">here</a> to retrieve pictures for some of the buttons and more detailed explanations of the above process.</p>
+<h3>Heroku</h3>
+<p>To deploy this project to Heroku, the following steps were taken...</p>
+<ol>
+    <li>From the VS Code terminal, I created requirements.txt and Procfile using the following commands:</li><br>
+    <div class="snippet-clipboard-content position-relative"><pre><code>pip3 freeze --local > requirements.txt<br>echo web: python run.py > Procfile</pre></code></div>
+    <li>I then committed these files to GitHub</li>
+    <li>Next, I logged into my Heroku account and created a new app named "movie-review-ms3".</li>
+    <li>I then located the <b>Deploy</b> tab and selected <b>GitHub</b> as the Deployment Method.</li>
+    <li>Once you have authenticated your GitHub account, you can select your repository.</li>
+    <li>Then, head to <b>Settings</b> and click the <b>Reveal Config Vars</b> button.</li>
+    <li>I then entered the following information...</li>
+    <table>
+        <thead>
+            <tr>
+                <th class="text-align-left"><strong>Key</strong></th>
+                <th class="text-align-left"><strong>Value</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="text-align-left">IP</td>
+                <td class="text-align-left"><code>0.0.0.0</code></td>
+            </tr>
+            <tr>
+                <td class="text-align-left">PORT</td>
+                <td class="text-align-left"><code>5000</code></td>
+            </tr>
+            <tr>
+                <td class="text-align-left">SECRET_KEY</td>
+                <td class="text-align-left"><code>&lt;app_secret_key&gt;</code></td>
+            </tr>
+            <tr>
+                <td class="text-align-left">MONGO_URI</td>
+                <td class="text-align-left">mongodb+srv://USERNAME:PASSWORD@cluster0.9yvjr.mongodb.net/movie?retryWrites=true&w=majority&ssl=true&ssl_cert_reqs=CERT_NONE</td>
+            </tr>
+            <tr>
+                <td class="text-align-left">MONGO_DBNAME</td>
+                <td class="text-align-left"><code>movie</code></td>
+            </tr>
+        </tbody>
+    </table>
+    <li>Next, I went back to the <b>Deploy</b> tab and selected <b>Enable Automatic Deploys</b>.</li>
+    <li>I then ensured the "main" branch was selected under Manual Deploy, and clicked the <b>Deploy Branch</b> button.</li>
+    <li>Shortly after, you will get a message informing you that your site has been deployed sucessfully.</li>
+
 <h2 id="credits">Credits</h2>
 <h3 id="code">Code</h3>
 <ul>
     <li>Bootstrap 4: Bootstrap Library used throughout the project to make site responsive using the Bootstrap Grid System.</li>
-    <li>SweetAlert2 for their styled alert popups.</li>
-    <li>Hoverr.css for the <i>hvr-grow</i> style for my interactive buttons.</li>
+    <li>Owl-Carousel for the touch enabled, responsive carousel.</li>
 </ul>
 <h3 id="content">Content</h3>
 <ul>
@@ -297,15 +340,12 @@
 </ul>
 <h3 id="media">Media</h3>
 <ul>
-    <li>The Logo was downloaded from <a href="https://www.pikpng.com/transpng/iRmJwow/">https://www.pikpng.com</a></li>
-    <li>Playing cards were downloaded from <a href="http://acbl.mybigcommerce.com/52-playing-cards/">http://acbl.mybigcommerce.com</a></li>
-    <li>Poker chips were downloaded from <a href="http://pngimg.com/images/sport/poker/">http://pngimg.com</a></li>
-    <li>Background image was downloaded from <a href="https://www.shutterstock.com/image-vector/poker-table-background-green-color-vector-1645872547">https://www.shutterstock.com</a>.
-    <li>The card deal audio was downloaded from <a href="https://freesound.org/people/egomassive/sounds/536784/">https://freesound.org</a>, which I then converted to MP3 using <a href="https://cloudconvert.com/ogg-to-mp3">https://cloudconvert.com</a>.</li>
+    <li>The Logo was downloaded from <a href="https://imgbin.com/png/rNVQ4Ea6/popcorn-png">https://imgbin.com/</a></li>
+    <li>The background image was downloaded from <a href="https://www.microsoft.com/en-gb/p/netflix/9wzdncrfj3tj?activetab=pivot:overviewtab">Neflix - Microsoft Store.</a></li>
 </ul>
 <h3 id="acknowledgements">Acknowledgements</h3>
 <ul>
     <li>My work colleagues at <a href="https://www.sgworld.com/">SG World</a>, for their insightful feedback/pointers and also for my paid subscription to <a href="https://www.pluralsight.com/">Pluralsight</a>.
     <li><a href="https://www.pluralsight.com/">Pluralsight</a>, <a href="https://www.udemy.com/">Udemy</a> and <a href="https://youtube.com">YouTube</a> for their extremely good course materials.</li>
-    <li>The <a href="https://codeinstitute.net/">Code Institute</a> Slack community and their wonderfully helpful nature.
+    <li>The wonderfully helpful<a href="https://codeinstitute.net/">Code Institute</a> Slack community.
 </ul>
