@@ -204,9 +204,9 @@
 <ul>
     <li>First Time Visitor Goals</li>
         <ol type="I">
-            <li>As a First Time Visitor, I want to find out how to play the card game Hi-Lo.</li>
+            <li>As a First Time Visitor, I want to see which movies people rate highly.</li>
                 <ol type="a">
-                    <li>Upon entering the site, users are automatically greeted with a clean Rules modal, which specifies the rules of the game and how to place a bet.</li>
+                    <li>Upon entering the site, users are presented with a carousel which loops through recently added reviews left by registered users. Also, once logged in, you can check out the Reviews page, which will list all the reviews left on the site.</li>
                 </ol>
             <li>As a First Time Visitor, I want to be able to enjoy the card game of Hi-Lo without a complicated interface.</li>
                 <ol type="a">
