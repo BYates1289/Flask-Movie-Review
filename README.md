@@ -55,7 +55,7 @@
                 </ol>
             <li id="returning-visitor">Returning Visitor Goals</li>
                 <ol type="a">
-                    <li>As a Returning Visitor, see if others have reviewed the same movie.</li>
+                    <li>As a Returning Visitor, I want to see if others have reviewed the same movie.</li>
                     <li>As a Returning Visitor, see which movies people are rating the highest.</li>
                 </ol>                       
         </ul>
@@ -163,10 +163,10 @@
 <h3 id="code-verification">Code Verification</h3>
 <p>The W3C Markup Validator, W3C CSS Validator and JSHint services were used to validate code to ensure there were no syntax errors in the project.</p>
 <ul>
-    <li>W3C Markup Validator - <a href="https://github.com/BYates1289/Hi-Lo-MS2/blob/master/assets/docs/HTML.pdf">Results</a></li>
-    <li>W3C CSS Validator - <a href="https://github.com/BYates1289/Hi-Lo-MS2/blob/master/assets/docs/CSS.pdf">Results</a></li>
-    <li>JSHint - <a href="https://github.com/BYates1289/Hi-Lo-MS2/blob/master/assets/docs/JSHint.pdf">Results</a></li>
-    <li>Python Validator - <a href="">Results</a></li>
+    <li>W3C Markup Validator - <a href="https://github.com/BYates1289/Flask-Movie-Review-Project-MS3/blob/main/flixreviews/static/docs/w3c_html.pdf">Results</a></li>
+    <li>W3C CSS Validator - <a href="https://github.com/BYates1289/Flask-Movie-Review-Project-MS3/blob/main/flixreviews/static/docs/w3c_css.pdf">Results</a></li>
+    <li>JSHint - <a href="https://github.com/BYates1289/Flask-Movie-Review-Project-MS3/blob/main/flixreviews/static/docs/jshint.pdf">Results</a></li>
+    <li>Python Validator - <a href="https://github.com/BYates1289/Flask-Movie-Review-Project-MS3/blob/main/flixreviews/static/docs/pythonvalidator.pdf">Results</a></li>
 </ul>
 <h3 id="lighthouse">Lighthouse</h3>
 <p>Performance of the site was analysed by <a href="https://developers.google.com/web/tools/lighthouse">Lighthouse</a>. Here are the results.</p>
@@ -178,14 +178,14 @@
 <h3 id="cross-browser">Cross Browser Testing</h3>
 <p>This project was tested with all major browsers and displayed as expected. Results can be seen here.</p>
 <ul>
-    <li><a href="https://github.com/BYates1289/Hi-Lo-MS2/blob/master/assets/img/testing/Chrome.JPG">Google Chrome</a></li>
-    <li><a href="https://github.com/BYates1289/Hi-Lo-MS2/blob/master/assets/img/testing/Firefox.JPG">Firefox</a></li>
-    <li><a href="https://github.com/BYates1289/Hi-Lo-MS2/blob/master/assets/img/testing/Safari.JPG">Safari</a></li>
-    <li><a href="https://github.com/BYates1289/Hi-Lo-MS2/blob/master/assets/img/testing/Opera.JPG">Opera</a></li>
-    <li><a href="https://github.com/BYates1289/Hi-Lo-MS2/blob/master/assets/img/testing/Edge.JPG">Microsoft Edge</a></li>
-    <li><a href="https://github.com/BYates1289/Hi-Lo-MS2/blob/master/assets/img/testing/Tor.jpg">Tor</a></li>
+    <li><a href="https://github.com/BYates1289/Flask-Movie-Review-Project-MS3/blob/main/flixreviews/static/img/chrome.png">Google Chrome</a></li>
+    <li><a href="https://github.com/BYates1289/Flask-Movie-Review-Project-MS3/blob/main/flixreviews/static/img/firefox.png">Firefox</a></li>
+    <li><a href="https://github.com/BYates1289/Flask-Movie-Review-Project-MS3/blob/main/flixreviews/static/img/safari.png">Safari</a></li>
+    <li><a href="https://github.com/BYates1289/Flask-Movie-Review-Project-MS3/blob/main/flixreviews/static/img/opera.png">Opera</a></li>
+    <li><a href="https://github.com/BYates1289/Flask-Movie-Review-Project-MS3/blob/main/flixreviews/static/img/edge.png">Microsoft Edge</a></li>
+    <li><a href="https://github.com/BYates1289/Flask-Movie-Review-Project-MS3/blob/main/flixreviews/static/img/tor.png">Tor</a></li>
+    <li><a href="https://github.com/BYates1289/Flask-Movie-Review-Project-MS3/blob/main/flixreviews/static/img/ie11.png">IE11</a></li>
 </ul>
-<p>I did experience UI issues using Internet Explorer 11. As can be seen <a href="#">here</a>. Given a little more time, I would have researched a fix.</p>
 <h3 id="responsive">Responsive Testing</h3>
 <p>Responsive testing was carried out with Chrome Dev Tools and <a href="https://www.browserstack.com/">BrowserStack</a>. The results for some popular devices can be seen below.</p>
 <ul>
@@ -206,32 +206,30 @@
                 <ol type="a">
                     <li>Upon entering the site, users are presented with a carousel which loops through recently added reviews left by registered users. Also, once logged in, you can check out the Reviews page, which will list all the reviews left on the site.</li>
                 </ol>
-            <li>As a First Time Visitor, I want to be able to enjoy the card game of Hi-Lo without a complicated interface.</li>
+            <li>As a First Time Visitor, I want to read reviews about movies I have not seen.</li>
                 <ol type="a">
-                    <li>The site was designed to have a minimalistic look which should not feel too confusing for users.</li>
-                    <li>All things displayed within the project all serve a purpose and are easily identifiable as to what their job is.</li>
-                    <li>The authentic colour scheme and card images used ensure the game feels more real and enjoyable.</li>
+                    <li>The carousel will loop through all reviews left by registered users. Individual reviews can be read, whether the user is registered or not, by clicking the Read Review button.</li>
+                    <li>Once a user is registered, they can view the Reviews page which will display all reviews on a single page.</li>
                 </ol>            
         </ol>
     <li>Returning Visitor Goals</li>
         <ol type="I">
-            <li>As a Returning Visitor, I want to better my High-Score.</li>
+            <li>As a Returning Visitor, I want to see if others have reviewed the same movie.</li>
                 <ol type="a">
-                    <li>Your High-Score will be shown to you after each game of Hi-Lo.</li>
-                    <li>If you better your High-Score, it will overwrite the previous one and will remain saved into local storage until the browsers cache has been cleared.</li>
+                    <li>Once logged in, the user can check whether anyone else has registered a review on the same movie as them on the Review page.</li>
                 </ol>
-            <li>As a Returning Visitor, I want to take more calculated risks when playing Hi-Lo.</li>
+            <li>As a Returning Visitor, see which movies people are rating the highest.</li>
                 <ol type="a">
-                    <li>If you are confident in your selections you can increase your bet up to the maximum stake of £1000 each turn.</li>
-                    <li>Users can make use of the Repeat Bet button after a large stake for an increased risk. You could use this throughout the game instead changing your bet amount each turn.</li> 
+                    <li>As part of the carousel, the reviewed score is shown also. The carousel is on a loop so each review left on the site will be shown along with the rating given.</li>
+                    <li>Each review will display the reviewers rating. The user can check these out on the Review page.</li> 
                 </ol>            
         </ol>
 </ul>
 <h3 id="further-testing">Further Testing</h3>
 <ul>
-    <li>The website was viewed on a variety of devices such as Desktop, Laptop, Surface Pro 6, iPad Air 2 & iPhone X.</li>
-    <li>I did a large amount of offline testing using VS Code when creating this project.</li>
-    <li>Family members were asked to review the site and to point out any bugs and/or user experience issues. One feedback I did get from my 7 year old son, was that it is unfair that it is not real money! :grin:</li>
+    <li>The application was personally tested on a variety of devices such as Desktop, Laptop, Surface Pro 6, iPad Air 2 & iPhone X.</li>
+    <li>All testing was undertaken offline using VS Code in a Python Virtual Environment (venv).</li>
+    <li>Family members and friends were asked to navigate the application and leave a review. Everyone who tested, confirmed the site was simple to navigate and to leave a review.</li>
 </ul>
 <h3 id="features-to-implement">Features Left To Implement</h3>
 <ul>
