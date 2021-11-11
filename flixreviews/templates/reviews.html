@@ -2,7 +2,7 @@
 {% block content %}
 <div class="row row d-flex justify-content-center">
 	<div class="col-md-10">
-		<section class="py-4">
+		<div class="py-4">
 			{% for i in reviews %}
 			<div class="container mt-3">
 				<div class="row justify-content-center">
@@ -38,7 +38,7 @@
 														<div class="row align-items-center">
 															<div class="col-md-12">
 																<form method="post" action="{{url_for('review_delete', review_id=i._id)}}">
-																	<button type="submit" class="btn btn-danger w-100">Delete</button>
+																	<button type="submit" class="btn btn-danger w-100" aria-label="Delete Button">Delete</button>
 																</form>
 															</div>
 														</div>
@@ -58,7 +58,7 @@
 				</div>
 			</div>
 			{% endfor %}
-		</section>
+		</div>
 	</div>
 </div>
 {% endblock content %}

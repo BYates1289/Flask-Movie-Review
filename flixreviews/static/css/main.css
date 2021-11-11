@@ -74,7 +74,7 @@
 }
 .owl-item {
   display: flex;
-  padding: 0 0.4%;
+  padding: 0 0.6%;
 }
 .owl-item img {
     height: 350px;
@@ -126,12 +126,21 @@
      color: gold;
      font-size: 25px;
 }
- @media screen and (max-width: 400px) {
-     .container h1 {
-         font-size: 25px;
+.heading {
+    margin-top: 3rem;
+}
+@media screen and (max-width: 800px) {
+    .owl-item img {
+        height: 325px;
     }
-     div.c-item > a > div.img-view > img {
-         height: 420px;
+}
+@media screen and (max-width: 500px) {
+     .heading {
+         font-size: 22px;
+         margin-top: 1rem;
+    }
+    div.c-item {
+       width: auto;
     }
     .mobile-center {
         text-align: center !important;
@@ -141,5 +150,11 @@
     }
     .movie-info p {
         font-size: 14px;
+    }
+}
+@media screen and (max-width: 280px) {
+    .navbar-brand,
+    .heading {
+        font-size: 17px;
     }
 }
