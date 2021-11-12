@@ -29,7 +29,8 @@
             <li><a href="#testing-user-stories">Testing User Stories</a></li>
         </ul>
     <li><a href="#further-testing">Further Testing</a></li>
-    <li><a href="#features-to-implement">Features Left To Implement
+    <li><a href="#features-to-implement">Features Left To Implement</a></li>
+    <li><a href="#bugs">Bugs</a></li>
     <li><a href="#deployment">Deployment</a></li>
         <ul>
             <li><a href="#heroku">Heroku</a></li>
@@ -121,11 +122,11 @@
         </ul>
     <li><a href="https://fonts.google.com/">Google Fonts</a></li>
         <ul>
-            <li>Google Fonts was used to import the 'Croissant One' and 'Roboto' fonts into my project. 'Croissant One' was used for the majority of body text, whilst 'Roboto' was used for the rules modal and alert popup.</li>
+            <li>Google Fonts was used to import the 'Poppins' font into my project.</li>
         </ul>
     <li><a href="https://fontawesome.com/">Font Awesome</a></li>
         <ul>
-            <li>Font Awesome was used to display a restart icon once the game has ended.</li>
+            <li>Font Awesome was used for the star rating widget.</li>
         </ul>
     <li><a href="https://jquery.com/">jQuery</a></li>
         <ul>
@@ -189,14 +190,13 @@
 <h3 id="responsive">Responsive Testing</h3>
 <p>Responsive testing was carried out with Chrome Dev Tools and <a href="https://www.browserstack.com/">BrowserStack</a>. The results for some popular devices can be seen below.</p>
 <ul>
-    <li><a href="https://github.com/BYates1289/Hi-Lo-MS2/blob/master/assets/img/testing/iPhoneX.JPG">iPhone X</a></li>
-    <li><a href="https://github.com/BYates1289/Hi-Lo-MS2/blob/master/assets/img/testing/iPhone%208%20Plus.JPG">iPhone 8 Plus</a></li>
-    <li><a href="https://github.com/BYates1289/Hi-Lo-MS2/blob/master/assets/img/testing/iPhone%20SE.JPG">iPhone SE</a></li>
-    <li><a href="https://github.com/BYates1289/Hi-Lo-MS2/blob/master/assets/img/testing/Pixel%203%20XL.JPG">Pixel 2 XL</a></li>
-    <li><a href="https://github.com/BYates1289/Hi-Lo-MS2/blob/master/assets/img/testing/Galaxy%20Note%2010.JPG">Galaxy Note 3</a></li>
-    <li><a href="https://github.com/BYates1289/Hi-Lo-MS2/blob/master/assets/img/testing/iPad%20Pro.JPG">iPad Pro</a></li>
-    <li><a href="https://github.com/BYates1289/Hi-Lo-MS2/blob/master/assets/img/testing/iPad%20Mini.JPG">iPad Mini</a></li>
-    <li><a href="https://github.com/BYates1289/Hi-Lo-MS2/blob/master/assets/img/testing/Galaxy%20Tab%20S4.JPG">Galaxy Tab S4</a></li>
+    <li><a href="https://github.com/BYates1289/Hi-Lo-MS2/blob/master/assets/img/testing/Galaxy%20Tab%20S4.JPG">Galaxy Fold (280px)</a></li>
+    <li><a href="https://github.com/BYates1289/Hi-Lo-MS2/blob/master/assets/img/testing/iPhone%20SE.JPG">iPhone SE (320px)</a></li>
+    <li><a href="https://github.com/BYates1289/Hi-Lo-MS2/blob/master/assets/img/testing/iPhoneX.JPG">iPhone X (375px)</a></li>  
+    <li><a href="https://github.com/BYates1289/Hi-Lo-MS2/blob/master/assets/img/testing/Pixel%203%20XL.JPG">Pixel 2 XL (411px)</a></li>
+    <li><a href="https://github.com/BYates1289/Hi-Lo-MS2/blob/master/assets/img/testing/Pixel%203%20XL.JPG">Surface Duo (540px)</a></li>
+    <li><a href="https://github.com/BYates1289/Hi-Lo-MS2/blob/master/assets/img/testing/iPad%20Mini.JPG">iPad (768px)</a></li>
+    <li><a href="https://github.com/BYates1289/Hi-Lo-MS2/blob/master/assets/img/testing/iPad%20Pro.JPG">iPad Pro (1024px)</a></li>   
 </ul>
 <h3 id="testing-user-stories">Testing User Stories from User Experience (UX) Section</h3>
 <ul>
@@ -283,7 +283,7 @@
     <li>Next, I went back to the <b>Deploy</b> tab and selected <b>Enable Automatic Deploys</b>.</li>
     <li>I then ensured the "main" branch was selected under Manual Deploy, and clicked the <b>Deploy Branch</b> button.</li>
     <li>Shortly after, I recieved a message informing me that my site had been deployed sucessfully.</li>
-
+</ol>
 <h3 id="forking-repo">Forking the GitHub Repository</h3>
 <p>By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...</p>
 <ol>
