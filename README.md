@@ -51,12 +51,12 @@
                 <ol type="a">
                     <li>As a First Time Visitor, I want to see which movies people rate highly.</li>
                     <li>As a First Time Visitor, I want to read reviews about movies I have not seen.</li>
-                    <li>As a First Time Visitor, I create an account and submit my own review.</li>
+                    <li>As a First Time Visitor, I want to create an account and submit my own review.</li>
                 </ol>
             <li id="returning-visitor">Returning Visitor Goals</li>
                 <ol type="a">
                     <li>As a Returning Visitor, I want to see if others have reviewed the same movie.</li>
-                    <li>As a Returning Visitor, see which movies people are rating the highest.</li>
+                    <li>As a Returning Visitor, I want to see which movies people are rating the highest.</li>
                 </ol>                       
         </ul>
     <li id="design">Design</li>
@@ -92,9 +92,10 @@
     <li>Responsive on all device sizes.</li>
     <li>Interactivity for users.</li>
     <li>Carousel on loop.</li>
-    <li>Ability to read personal reviews left by registered users.</li>
-    <li>Ability to edit and delete reviews left by you.</li>
-    <li>Ability to edit Profile page details, such as Username, Profile Image, Email Address and Password.</li>
+    <li>Users can create an account and leave their own movie review.
+    <li>Users can edit or delete their own reviews.</li>
+    <li>Ability to read reviews left by other registered users.</li>
+    <li>Ability to edit Profile page details.</li>
 </ul>
 <h2 id="technologies-used">Technologies Used</h2>
 <h3>Languages Used</h3>
@@ -106,7 +107,7 @@
 </ul>
 <h3 id="frameworks">Frameworks, Libraries & Programs Used</h3>
 <ol>
-    <li><a href="https://getbootstrap.com/docs/4.0/getting-started/introduction/">Bootstrap 4</a></li>
+    <li><a href="https://getbootstrap.com/docs/4.3/getting-started/download/">Bootstrap 4</a></li>
         <ul>
             <li>Bootstrap was used to assist with the responsiveness and styling of the website.</li>
         </ul>
@@ -132,7 +133,7 @@
         </ul>
     <li><a href="https://owlcarousel2.github.io/OwlCarousel2/">Owl-Carousel</a></li>
         <ul>
-            <li>Used to create a touch enabled, respsonsive carousel slider.</li>
+            <li>Used to create a touch enabled, responsive carousel slider.</li>
         </ul>
     <li><a href="https://code.visualstudio.com/">VS Code</a></li>
         <ul>
@@ -156,25 +157,24 @@
         </ul>
     <li><a href="https://developer.chrome.com/docs/devtools/">Chrome DevTools</a></li>
         <ul>
-            <li>Absolutely essential tool for debugging code.</li>
+            <li>Essential tools for debugging code.</li>
         </ul>
 </ol>
 <h2 id="testing">Testing</h2>
 <h3 id="code-verification">Code Verification</h3>
-<p>The W3C Markup Validator, W3C CSS Validator and JSHint services were used to validate code to ensure there were no syntax errors in the project.</p>
+<p>The W3C HTML Validator, W3C CSS Validator,JSHint and ExtendsClass services were used to validate code to ensure there were no syntax errors in the project.</p>
 <ul>
-    <li>W3C Markup Validator - <a href="https://github.com/BYates1289/Flask-Movie-Review-Project-MS3/blob/main/flixreviews/static/docs/w3c_html.pdf">Results</a></li>
+    <li>W3C HTML Validator - <a href="https://github.com/BYates1289/Flask-Movie-Review-Project-MS3/blob/main/flixreviews/static/docs/w3c_html.pdf">Results</a></li>
     <li>W3C CSS Validator - <a href="https://github.com/BYates1289/Flask-Movie-Review-Project-MS3/blob/main/flixreviews/static/docs/w3c_css.pdf">Results</a></li>
     <li>JSHint - <a href="https://github.com/BYates1289/Flask-Movie-Review-Project-MS3/blob/main/flixreviews/static/docs/jshint.pdf">Results</a></li>
     <li>Python Validator - <a href="https://github.com/BYates1289/Flask-Movie-Review-Project-MS3/blob/main/flixreviews/static/docs/pythonvalidator.pdf">Results</a></li>
 </ul>
 <h3 id="lighthouse">Lighthouse</h3>
 <p>Performance of the site was analysed by <a href="https://developers.google.com/web/tools/lighthouse">Lighthouse</a>. Here are the results.</p>
-<img src="./assets/img/testing/Lighthouse.JPG">
+<img src="https://github.com/BYates1289/Flask-Movie-Review-Project-MS3/blob/main/flixreviews/static/img/lighthouse.png?raw=true">
 <h3 id="speed-test">Speed Test</h3>
 <p>Site speed test was performed by <a href="https://gtmetrix.com/">GTMetrix</a>. Here are the results.</p>
-<img src="./assets/img/testing/PageLoadTime.JPG">
-<p>Prior to the above, I was informed in a previous test that my images were not optimised and that should compress them. I used <a href="https://tinypng.com/">TinyPNG</a> for this, which resulted in 60% better performance.</p>
+<img src="https://github.com/BYates1289/Flask-Movie-Review-Project-MS3/blob/main/flixreviews/static/img/speedtest.png?raw=true">
 <h3 id="cross-browser">Cross Browser Testing</h3>
 <p>This project was tested with all major browsers and displayed as expected. Results can be seen here.</p>
 <ul>
@@ -218,7 +218,7 @@
                 <ol type="a">
                     <li>Once logged in, the user can check whether anyone else has registered a review on the same movie as them on the Review page.</li>
                 </ol>
-            <li>As a Returning Visitor, see which movies people are rating the highest.</li>
+            <li>As a Returning Visitor, I want to see which movies people are rating the highest.</li>
                 <ol type="a">
                     <li>As part of the carousel, the reviewed score is shown also. The carousel is on a loop so each review left on the site will be shown along with the rating given.</li>
                     <li>Each review will display the reviewers rating. The user can check these out on the Review page.</li> 
@@ -235,18 +235,20 @@
 <ul>
     <li>I would love to implement the <a href="https://www.themoviedb.org/documentation/api">TMDB</a> API so that users can search via the API for their movie review. This would pull the movie posters into the application too.</li>
 </ul>
+<h2 id="bugs">Bugs</h2>
+<p>When building the carousel, I had an <<code>a</code>> as parent to multiple <<code>div</code>>, which worked fine, but failed validation. I did this so that the movie poster and title would be linked to the review. I removed it and stuck with the Read Review button.
 <h2 id="deployment">Deployment</h2>
 <h3 id="heroku">Heroku</h3>
 <p>To deploy this project to Heroku, the following steps were taken...</p>
 <ol>
-    <li>From the VS Code terminal, I created requirements.txt and Procfile using the following commands:</li><br>
+    <li>From the VS Code terminal, I created a requirements.txt and Procfile using the following commands:</li><br>
     <div class="snippet-clipboard-content position-relative"><pre><code>pip3 freeze --local > requirements.txt</pre></code></div>
     <div class="snippet-clipboard-content position-relative"><pre><code>echo web: python run.py > Procfile</pre></code></div>
-    <li>I then committed these files to GitHub</li>
+    <li>I then committed these files to GitHub.</li>
     <li>Next, I logged into my Heroku account and created a new app named "movie-review-ms3".</li>
     <li>I then located the <b>Deploy</b> tab and selected <b>GitHub</b> as the Deployment Method.</li>
-    <li>Once you have authenticated your GitHub account, you can select your repository.</li>
-    <li>Then, head to <b>Settings</b> and click the <b>Reveal Config Vars</b> button.</li>
+    <li>Once I authenticated my GitHub account, I selected my repository.</li>
+    <li>Then, I went to <b>Settings</b> and clicked the <b>Reveal Config Vars</b> button.</li>
     <li>I then entered the following information...</li>
     <table>
         <thead>
@@ -280,7 +282,7 @@
     </table>
     <li>Next, I went back to the <b>Deploy</b> tab and selected <b>Enable Automatic Deploys</b>.</li>
     <li>I then ensured the "main" branch was selected under Manual Deploy, and clicked the <b>Deploy Branch</b> button.</li>
-    <li>Shortly after, you will get a message informing you that your site has been deployed sucessfully.</li>
+    <li>Shortly after, I recieved a message informing me that my site had been deployed sucessfully.</li>
 
 <h3 id="forking-repo">Forking the GitHub Repository</h3>
 <p>By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...</p>
@@ -311,7 +313,7 @@
 <h2 id="credits">Credits</h2>
 <h3 id="code">Code</h3>
 <ul>
-    <li>Bootstrap 4: Bootstrap Library used throughout the project to make site responsive using the Bootstrap Grid System.</li>
+    <li>Bootstrap 4: Bootstrap Library used throughout the project to make site responsive.</li>
     <li>Owl-Carousel for the touch enabled, responsive carousel.</li>
 </ul>
 <h3 id="content">Content</h3>
