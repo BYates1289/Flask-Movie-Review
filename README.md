@@ -188,15 +188,15 @@
     <li><a href="https://github.com/BYates1289/Flask-Movie-Review-Project-MS3/blob/main/flixreviews/static/img/ie11.png">IE11</a></li>
 </ul>
 <h3 id="responsive">Responsive Testing</h3>
-<p>Responsive testing was carried out with Chrome Dev Tools and <a href="https://www.browserstack.com/">BrowserStack</a>. The results for some popular devices can be seen below.</p>
+<p>Responsive testing was carried out with Chrome Dev Tools. The results for some popular devices can be seen below.</p>
 <ul>
-    <li><a href="https://github.com/BYates1289/Hi-Lo-MS2/blob/master/assets/img/testing/Galaxy%20Tab%20S4.JPG">Galaxy Fold (280px)</a></li>
-    <li><a href="https://github.com/BYates1289/Hi-Lo-MS2/blob/master/assets/img/testing/iPhone%20SE.JPG">iPhone SE (320px)</a></li>
-    <li><a href="https://github.com/BYates1289/Hi-Lo-MS2/blob/master/assets/img/testing/iPhoneX.JPG">iPhone X (375px)</a></li>  
-    <li><a href="https://github.com/BYates1289/Hi-Lo-MS2/blob/master/assets/img/testing/Pixel%203%20XL.JPG">Pixel 2 XL (411px)</a></li>
-    <li><a href="https://github.com/BYates1289/Hi-Lo-MS2/blob/master/assets/img/testing/Pixel%203%20XL.JPG">Surface Duo (540px)</a></li>
-    <li><a href="https://github.com/BYates1289/Hi-Lo-MS2/blob/master/assets/img/testing/iPad%20Mini.JPG">iPad (768px)</a></li>
-    <li><a href="https://github.com/BYates1289/Hi-Lo-MS2/blob/master/assets/img/testing/iPad%20Pro.JPG">iPad Pro (1024px)</a></li>   
+    <li><a href="https://github.com/BYates1289/Flask-Movie-Review-Project-MS3/blob/main/flixreviews/static/img/galaxyfold.png">Galaxy Fold</a>(280px)</li>
+    <li><a href="https://github.com/BYates1289/Flask-Movie-Review-Project-MS3/blob/main/flixreviews/static/img/iphonese.png">iPhone SE</a>(320px)</li>
+    <li><a href="https://github.com/BYates1289/Flask-Movie-Review-Project-MS3/blob/main/flixreviews/static/img/iphonex.png">iPhone X</a>(375px)</li>  
+    <li><a href="https://github.com/BYates1289/Flask-Movie-Review-Project-MS3/blob/main/flixreviews/static/img/pixel2xl.png">Pixel 2 XL</a>(411px)</li>
+    <li><a href="https://github.com/BYates1289/Flask-Movie-Review-Project-MS3/blob/main/flixreviews/static/img/surfaceduo.png">Surface Duo</a>(540px)</li>
+    <li><a href="https://github.com/BYates1289/Flask-Movie-Review-Project-MS3/blob/main/flixreviews/static/img/ipad.png">iPad</a>(768px)</li>
+    <li><a href="https://github.com/BYates1289/Flask-Movie-Review-Project-MS3/blob/main/flixreviews/static/img/ipadpro.png">iPad Pro</a>(1024px)</li>   
 </ul>
 <h3 id="testing-user-stories">Testing User Stories from User Experience (UX) Section</h3>
 <ul>
