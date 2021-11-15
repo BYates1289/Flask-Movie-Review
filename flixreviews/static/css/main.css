@@ -111,7 +111,7 @@
      display: inline-block;
 }
  .rating-stars ul>li.star>i.fa {
-     font-size: 2.5em;
+     font-size: 2em;
      color: #ccc;
 }
  .rating-stars ul>li.star:hover>i.fa {
@@ -127,10 +127,6 @@
      color: gold;
      text-shadow: 0 0 20px #952;
 }
- .fa-star, .stars {
-     color: gold;
-     font-size: 25px;
-}
 .heading {
     margin-top: 3rem;
 }
@@ -138,33 +134,43 @@
     .owl-item img {
         height: 325px;
     }
+    .mobile-center {
+        text-align: center !important;
+    }
 }
 @media screen and (max-width: 768px) {
     .movie-poster {
         border-radius: 0.25rem;
-    }
-}
-@media screen and (max-width: 500px) {
-     .heading {
-         font-size: 22px;
-         margin-top: 1rem;
-    }
-    div.c-item {
-       width: auto;
+        margin-top: 1rem;
     }
     .mobile-center {
         text-align: center !important;
     }
-    .stars {
-        font-size: 18px;
+}
+@media screen and (max-width: 500px) {
+     .heading {
+        font-size: 22px;
+        margin-top: 1rem;
+    }
+    div.c-item {
+        width: auto;
     }
     .movie-info p {
         font-size: 14px;
+    }
+    .mobile-center {
+        text-align: center !important;
     }
 }
 @media screen and (max-width: 280px) {
     .navbar-brand,
     .heading {
         font-size: 17px;
+    }
+    .stars {
+        font-size: 15px;
+    }
+    .mobile-center {
+        text-align: center !important;
     }
 }
