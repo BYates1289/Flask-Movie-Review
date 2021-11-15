@@ -7,12 +7,12 @@
 			<div class="container mt-3">
 				<div class="row justify-content-center">
 					<div class="col-12">
-						<div class="bg-white rounded">
+						<div class="bg-white mobile-center rounded">
 							<div>
 								<div class="p-3">
-									<h5>{{ i.title }} </h5>
-									<p>{{i.review}} </p>
-									<div class="stars mobile-center">
+									<h5><strong>{{ i.title }}</strong></h5>
+									<p>{{i.review}}</p>
+									<div class="stars">
 										{% for i in i.star|ran %}
 										<span class="fa fa-star checked"></span>
 										{% endfor %}
@@ -24,13 +24,13 @@
 													<li class="list-group-item">
 														<div class="row align-items-center">
 															<p class="col-md-4">Reviewed by:</p>
-															<p class="col-md-8 text-right">{{ i.author }}</p>
+															<p class="col-md-8">{{ i.author }}</p>
 														</div>
 													</li>
 													<li class="list-group-item">
 														<div class="row align-items-center">
 															<p class="col-md-4">Date:</p>
-															<p class="col-md-8 text-right">{{ i.created_at }}</p>
+															<p class="col-md-8">{{ i.created_at }}</p>
 														</div>
 													</li>
 													{% if check==1 and user==i.author %}
