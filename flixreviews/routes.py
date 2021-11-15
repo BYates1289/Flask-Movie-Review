@@ -170,3 +170,44 @@ def review_show(review_id):
     review = reviews.find_one({'_id': ObjectId(review_id)})
     return render_template('single_review.html', review=review,
                            check=check)
+
+
+@app.route("/review_edit/<string:review_id>", methods=["GET", "POST"])
+def review_edit(review_id):
+    check = 0
+    if "username" in session:
+        check = 1
+    reviews = mongo.db.reviews
+    review = reviews.find_one({"_id": ObjectId(review_id)})
+    form = PostForm()
+    if request.method == "POST":
+        if form.validate_on_submit():
+
+            reviews.update_one(
+                {"_id": ObjectId(review_id)},
+                {
+                    "$set": {
+                        "title": form.title.data,
+                        "link": form.link.data,
+                        "review": form.review.data,
+                        "content": form.content.data,
+                        "star": request.form["star"],
+                        "author": session["username"],
+                        "created_at": str(datetime.now().date()),
+                    }
+                },
+            )
+            flash("Your review has been updated!", "success")
+            return redirect(url_for("reviews"))
+    elif request.method == "GET":
+        form.title.data = review["title"]
+        form.link.data = review["link"]
+        form.review.data = review["review"]
+        form.content.data = review["content"]
+        return render_template(
+            "edit_review.html",
+            title="New Review",
+            form=form,
+            check=check,
+            star=review["star"],
+        )
