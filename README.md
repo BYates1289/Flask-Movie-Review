@@ -328,6 +328,6 @@
 <h3 id="acknowledgements">Acknowledgements</h3>
 <ul>
     <li>My work colleagues at <a href="https://www.sgworld.com/">SG World</a>, for their insightful feedback/pointers and also for my paid subscription to <a href="https://www.pluralsight.com/">Pluralsight</a>.
-    <li><a href="https://www.pluralsight.com/">Pluralsight</a>, <a href="https://www.udemy.com/">Udemy</a> and <a href="https://youtube.com">YouTube</a> for their extremely good course materials.</li>
-    <li>The wonderfully helpful<a href="https://codeinstitute.net/">Code Institute</a> Slack community.
+    <li><a href="https://codeinstitute.net/">Code Institute</a>, <a href="https://www.pluralsight.com/">Pluralsight</a>, <a href="https://www.udemy.com/">Udemy</a> and <a href="https://youtube.com">YouTube</a> for their extremely good course materials.</li>
+    <li>The wonderfully helpful <a href="https://codeinstitute.net/">Code Institute</a> Slack community.
 </ul>
