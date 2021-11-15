@@ -141,6 +141,7 @@ body {
     border-radius: 50%;
     background-color: #b81f1f;
     border: none;
+    z-index: 1;
 }
 @media screen and (max-width: 800px) {
     .owl-item img {
