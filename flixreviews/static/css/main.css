@@ -139,6 +139,11 @@
         height: 325px;
     }
 }
+@media screen and (max-width: 768px) {
+    .movie-poster {
+        border-radius: 0.25rem;
+    }
+}
 @media screen and (max-width: 500px) {
      .heading {
          font-size: 22px;
