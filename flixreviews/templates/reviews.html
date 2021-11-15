@@ -35,6 +35,17 @@
 													</li>
 													{% if check==1 and user==i.author %}
 													<li class="list-group-item">
+                                                        <div class="row align-items-center">
+                                                            <div class="col-md-12">
+                                                                <form method="get"
+                                                                    action="{{url_for('review_edit', review_id=i._id)}}">
+                                                                    <button type="submit"
+                                                                        class="btn btn-secondary w-100">Edit</button>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+													<li class="list-group-item">
 														<div class="row align-items-center">
 															<div class="col-md-12">
 																<form method="post" action="{{url_for('review_delete', review_id=i._id)}}">
