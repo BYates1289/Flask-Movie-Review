@@ -152,6 +152,9 @@ body {
     visibility: visible;
     opacity: 1;
 }
+.username, .creation-date {
+    text-align: right;
+}
 @media screen and (max-width: 800px) {
     .owl-item img {
         height: 325px;
@@ -161,6 +164,9 @@ body {
     }
     .rating-stars {
         font-size: 15px;
+    }
+    .username, .creation-date {
+        text-align: center;
     }
 }
 @media screen and (max-width: 768px) {
@@ -172,7 +178,7 @@ body {
         text-align: center !important;
     }
     .rating-stars {
-        font-size: 16px;
+        font-size: 15px;
     }
 }
 @media screen and (max-width: 500px) {
