@@ -1,22 +1,11 @@
-let mybutton = document.getElementById("btn-back-to-top");
-window.onscroll = function () {
-  scrollFunction();
-};
+window.addEventListener('scroll', function(){
+  const scroll = document.querySelector('#button-top');
+  scroll.classList.toggle("active" , window.scrollY > 500)
+})
 
-function scrollFunction() {
-  if (
-    document.body.scrollTop > 400 ||
-    document.documentElement.scrollTop > 400
-  ) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-
-mybutton.addEventListener("click", backToTop);
-
-function backToTop() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
+function scrollToTop(){
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  })
 }
