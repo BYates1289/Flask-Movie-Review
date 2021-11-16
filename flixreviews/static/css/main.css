@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Poppins&display=swap);
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 body {
      background-image: url(/static/img/background.jpg);
@@ -13,6 +14,7 @@ body {
      min-height: 100vh;
      display: flex;
      flex-direction: column;
+     overflow-x: hidden;
 }
  h1, h2, h3, h4, h5, h6 {
      color: #000;
@@ -157,6 +159,9 @@ body {
     .mobile-center {
         text-align: center !important;
     }
+    .rating-stars {
+        font-size: 15px;
+    }
 }
 @media screen and (max-width: 768px) {
     .movie-poster {
@@ -165,6 +170,9 @@ body {
     }
     .mobile-center {
         text-align: center !important;
+    }
+    .rating-stars {
+        font-size: 16px;
     }
 }
 @media screen and (max-width: 500px) {
@@ -176,7 +184,7 @@ body {
         width: auto;
     }
     .stars {
-        font-size: 22px;
+        font-size: 21px;
     }
     .rating-stars {
         font-size: 12px;
