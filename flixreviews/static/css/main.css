@@ -168,7 +168,7 @@ body {
     }
 }
 @media screen and (max-width: 500px) {
-     .heading {
+    .heading {
         font-size: 22px;
         margin-top: 1rem;
     }
@@ -178,11 +178,19 @@ body {
     .stars {
         font-size: 22px;
     }
+    .rating-stars {
+        font-size: 12px;
+    }
     .movie-info p {
         font-size: 14px;
     }
     .mobile-center {
         text-align: center !important;
+    }
+}
+@media screen and (max-width: 375px) {
+    .rating-stars {
+        font-size: 11px;
     }
 }
 @media screen and (max-width: 320px) {
