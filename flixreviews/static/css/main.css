@@ -155,10 +155,12 @@ body {
 .username, .creation-date {
     text-align: right;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1024px) {
     .owl-item img {
-        height: 325px;
+        height: 300px;
     }
+}
+@media screen and (max-width: 800px) {
     .mobile-center {
         text-align: center !important;
     }
