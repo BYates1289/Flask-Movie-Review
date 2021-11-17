@@ -35,7 +35,7 @@ body {
  .site-header .navbar-nav .nav-link:hover {
      color: #fff;
 }
- .account, .my-review, .login, .register {
+ .account, .my-review, .login, .register, .edit-review {
      margin-top:40px;
 }
  .fa-star, .stars {
