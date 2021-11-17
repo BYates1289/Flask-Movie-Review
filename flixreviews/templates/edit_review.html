@@ -1,8 +1,7 @@
 {% extends "layout.html" %} {% block content %}
 
-<div class="row row d-flex justify-content-center" style="margin-top:40px">
+<div class="row d-flex justify-content-center p-3" style="margin-top:40px">
     <div class="col-md-8">
-
         <div class="content-section">
             <form method="POST" action="">
                 {{ form.hidden_tag() }}
@@ -58,7 +57,6 @@
                         {% endif %}
                     </div>
                     <section class="rating-widget">
-                        <!-- Rating Stars Box -->
                         <div class="rating-stars text-center">
                             <ul id="stars">
                                 <li class="star" data-value="1" value="1">
