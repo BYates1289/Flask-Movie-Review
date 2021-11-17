@@ -160,6 +160,11 @@ body {
         height: 300px;
     }
 }
+@media screen and (max-width: 991px) {
+    .rating-stars {
+        font-size: 14px;
+    }
+}
 @media screen and (max-width: 800px) {
     .mobile-center {
         text-align: center !important;
@@ -180,6 +185,21 @@ body {
         text-align: center !important;
     }
 }
+@media screen and (max-width: 567px) {
+    .rating-stars {
+        font-size: 17px;
+    }
+}
+@media screen and (max-width: 539px) {
+    .rating-stars {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 512px) {
+    .rating-stars {
+        font-size: 15px;
+    }
+}
 @media screen and (max-width: 500px) {
     .heading {
         font-size: 22px;
@@ -191,9 +211,6 @@ body {
     .stars {
         font-size: 21px;
     }
-    .rating-stars {
-        font-size: 12px;
-    }
     .movie-info p {
         font-size: 14px;
     }
@@ -201,9 +218,39 @@ body {
         text-align: center !important;
     }
 }
+@media screen and (max-width: 485px) {
+    .rating-stars {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 458px) {
+    .rating-stars {
+        font-size: 13px;
+    }
+}
+@media screen and (max-width: 430px) {
+    .rating-stars {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 402px) {
+    .rating-stars {
+        font-size: 11px;
+    }
+}
+@media screen and (max-width: 402px) {
+    .rating-stars {
+        font-size: 11px;
+    }
+}
 @media screen and (max-width: 375px) {
     .rating-stars {
         font-size: 10px;
+    }
+}
+@media screen and (max-width: 349px) {
+    .rating-stars {
+        font-size: 9px;
     }
 }
 @media screen and (max-width: 320px) {
