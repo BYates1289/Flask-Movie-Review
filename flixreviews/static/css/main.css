@@ -264,7 +264,7 @@ body {
         font-size: 8px;
     }
 }
-@media screen and (max-width: 280px) {
+@media screen and (max-width: 293px) {
     .navbar-brand,
     .heading {
         font-size: 17px;
