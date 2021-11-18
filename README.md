@@ -167,7 +167,7 @@
 <img src="https://github.com/BYates1289/Flask-Movie-Review-Project-MS3/blob/main/flixreviews/static/img/dbschema.png?raw=true">
 <h2 id="testing">Testing</h2>
 <h3 id="code-verification">Code Verification</h3>
-<p>The W3C HTML Validator, W3C CSS Validator,JSHint and ExtendsClass services were used to validate code to ensure there were no syntax errors in the project.</p>
+<p>The W3C HTML Validator, W3C CSS Validator, JSHint and ExtendsClass services were used to validate code to ensure there were no syntax errors in the project.</p>
 <ul>
     <li>W3C HTML Validator - <a href="https://github.com/BYates1289/Flask-Movie-Review-Project-MS3/blob/main/flixreviews/static/docs/w3c_html.pdf">Results</a></li>
     <li>W3C CSS Validator - <a href="https://github.com/BYates1289/Flask-Movie-Review-Project-MS3/blob/main/flixreviews/static/docs/w3c_css.pdf">Results</a></li>
