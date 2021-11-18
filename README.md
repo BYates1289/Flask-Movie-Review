@@ -19,6 +19,7 @@
     <li><a href="#features">Features</a></li>
     <li><a href="#technologies-used">Technologies Used</a></li>
     <li><a href="#frameworks">Frameworks Used</a></li>
+    <li><a href="#dbschema">Database Schema</a></li>
     <li><a href="#testing">Testing</a></li>
         <ul>
             <li><a href="#code-verification">Code Verification</a></li>
@@ -161,6 +162,9 @@
             <li>Essential tools for debugging code.</li>
         </ul>
 </ol>
+<h3 id="dbschema">Database Schema</h3>
+<p>The MongoDB consists of two collections. 'Users' and 'Reviews'. A visual representation of the database can be seen below.</p>
+<img src="https://github.com/BYates1289/Flask-Movie-Review-Project-MS3/blob/main/flixreviews/static/img/dbschema.png?raw=true">
 <h2 id="testing">Testing</h2>
 <h3 id="code-verification">Code Verification</h3>
 <p>The W3C HTML Validator, W3C CSS Validator,JSHint and ExtendsClass services were used to validate code to ensure there were no syntax errors in the project.</p>
