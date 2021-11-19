@@ -163,7 +163,8 @@
         </ul>
 </ol>
 <h3 id="dbschema">Database Schema</h3>
-<p>The MongoDB consists of two collections. 'Users' and 'Reviews'. A visual representation of the database can be seen below.</p>
+<p>The database consists of two collections ('users' and 'reviews') with a GridFS bucket (fs.chunks and fs.files).</p>
+<p>A visual representation of the database can be seen below.</p>
 <img src="https://github.com/BYates1289/Flask-Movie-Review-Project-MS3/blob/main/flixreviews/static/img/dbschema.png?raw=true">
 <h2 id="testing">Testing</h2>
 <h3 id="code-verification">Code Verification</h3>
