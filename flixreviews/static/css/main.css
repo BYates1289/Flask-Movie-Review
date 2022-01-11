@@ -217,6 +217,9 @@ body {
     .mobile-center {
         text-align: center !important;
     }
+    .owl-carousel .owl-item img {
+        width: 200px !important;
+    }
 }
 @media screen and (max-width: 485px) {
     .rating-stars {
