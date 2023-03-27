@@ -10,7 +10,7 @@ app = flask.Flask(__name__)
 # app.config['SECRET_KEY'] =  os.environ['SECRET_KEY']
 # app.config['MONGO_URI'] =  os.environ['MONGO_URI']
 app.config['SECRET_KEY'] =  "sapdpsadksapdk111msdmsmdsld@"
-app.config['MONGO_URI'] =  "mongodb+srv://root:8388f53f-2f1b-4067-a828-89fe71309233@mycluster.52mki.mongodb.net/?retryWrites=true&w=majority"
+app.config['MONGO_URI'] =  "mongodb+srv://root:Pakchk12345@cluster0.6idju9p.mongodb.net/movie-review?retryWrites=true&w=majority"
 
 mongo = PyMongo(app)
 
