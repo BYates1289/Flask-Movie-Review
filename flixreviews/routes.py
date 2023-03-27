@@ -37,7 +37,7 @@ def register():
         if form.validate_on_submit():
             hashpass = bcrypt.hashpw(form.password.data.encode('utf-8'
                     ), bcrypt.gensalt())
-            users.insert({'name': form.username.data,
+            users.insert_one({'name': form.username.data,
                          'password': hashpass,
                          'email': form.email.data})
 
@@ -126,7 +126,7 @@ def new_review():
     form = PostForm()
     reviews = mongo.db.reviews
     if form.validate_on_submit():
-        reviews.insert({
+        reviews.insert_one({
             'title': form.title.data,
             'link': form.link.data,
             'review': form.review.data,
