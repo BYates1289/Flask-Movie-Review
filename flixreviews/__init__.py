@@ -1,28 +1,20 @@
-import os
-from flask import Flask
-from flask_pymongo import PyMongo
+from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
 import flask
 from flask_bcrypt import Bcrypt
 from flask_login import LoginManager, login_manager
 
 app = flask.Flask(__name__)
 
-# app.config['SECRET_KEY'] =  os.environ['SECRET_KEY']
-# app.config['MONGO_URI'] =  os.environ['MONGO_URI']
-app.config['SECRET_KEY'] =  "sapdpsadksapdk111msdmsmdsld@"
-app.config['MONGO_URI'] =  "mongodb+srv://root:Pakchk12345@cluster0.6idju9p.mongodb.net/movie-review?retryWrites=true&w=majority"
+app.config['SECRET_KEY'] = '5791628bb0b13ce0c676dfde280ba245'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 
-mongo = PyMongo(app)
-
+db = SQLAlchemy(app)
+migrate = Migrate(app, db)
 bcrypt = Bcrypt(app)
 login_manager = LoginManager(app)
 login_manager.login_view = 'login'
 login_manager.login_message_category = 'info'
 
-
-@login_manager.user_loader
-def load_user(user_id):
-    users = mongo.db.users
-    return users.find_one({'id': user_id})
 
 from flixreviews import routes
