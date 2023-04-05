@@ -26,7 +26,7 @@
 																Reviewed by:
 															</p>
 															<p class="col-md-8 text-right mobile-center">
-																{{ review.author }}
+																{{ review.author.username }}
 															</p>
 														</div>
 													</li>
@@ -36,7 +36,7 @@
 																Date:
 															</p>
 															<p class="col-md-8 text-right mobile-center">
-																{{ review.created_at }}
+																{{ review.date_posted }}
 															</p>
 														</div>
 													</li>
@@ -44,7 +44,8 @@
 											</div>
 										</div>
 										<div class="col-md-6">
-											<img class="img-fluid img-large" src=" {{ review.link }} " alt="Movie Poster">
+											<img class="img-fluid img-large" src=" {{ review.link }} "
+												alt="Movie Poster">
 										</div>
 									</div>
 									</form>

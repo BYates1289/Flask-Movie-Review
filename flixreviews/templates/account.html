@@ -4,10 +4,11 @@
 	<div class="col-md-8">
 		<div class="content-section">
 			<div class="media">
-				{% if profile_image == "" %}
-				<img class="rounded-circle account-img" src="{{url_for('static', filename='profile_pics/default.jpg')}}" alt="Default Profile Image">
+				{% if image_file == "" %}
+				<img class="rounded-circle account-img" src="{{url_for('static', filename='profile_pics/default.jpg')}}"
+					alt="Default Profile Image">
 				{% else %}
-				<img class="rounded-circle account-img" src="{{ profile_image }}" alt="Profile Image">
+				<img class="rounded-circle account-img" src="{{ image_file }}" alt="Profile Image">
 				{% endif %}
 			</div>
 			<form method="POST" action="" enctype="multipart/form-data">
