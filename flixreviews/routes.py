@@ -126,14 +126,15 @@ def reviews():
 
 @app.route('/review_delete/<string:review_id>', methods=['Post'])
 def review_delete(review_id):
-    dlt = Reviews.query.get_or_404(review_id)
-    if dlt.author != current_user:
+    if current_user.is_authenticated:
+        dlt = Reviews.query.get_or_404(review_id)
+        if dlt.author == current_user or current_user.super_user:
+            db.session.delete(dlt) 
+            db.session.commit()
+            flash('Your review has been deleted!', 'success')
+            return redirect(url_for('reviews'))
         return redirect(url_for('logout'))
-    else:
-        db.session.delete(dlt)
-        db.session.commit()
-        flash('Your review has been deleted!', 'success')
-        return redirect(url_for('reviews'))
+    return redirect(url_for('login'))
 
 
 @app.route('/review_show/<string:review_id>', methods=['GET'])
@@ -144,30 +145,80 @@ def review_show(review_id):
 
 @app.route("/review_edit/<string:review_id>", methods=["GET", "POST"])
 def review_edit(review_id):
-    review = Reviews.query.filter_by(id=review_id).first()
-    form = PostForm()
+    if current_user.is_authenticated:
+        review = Reviews.query.filter_by(id=review_id).first()
+        if review.author == current_user:
+            form = PostForm()
+            if request.method == "POST":
+                if form.validate_on_submit():
+                    review.star = request.form["star"]
+                    review.link = form.link.data
+                    review.review = form.review.data
+                    review.content = form.content.data
+                    review.title = form.title.data
 
-    if request.method == "POST":
-        if form.validate_on_submit():
-            review.star = request.form["star"]
-            review.link = form.link.data
-            review.review = form.review.data
-            review.content = form.content.data
-            review.title = form.title.data
+                    db.session.add(review)
+                    db.session.commit()
+                    flash("Your review has been updated!", "success")
+                    return redirect(url_for("reviews"))
+                return render_template("register.html", title="Register", form=form)
+            elif request.method == "GET":
+                form.title.data = review.title
+                form.link.data = review.link
+                form.review.data = review.review
+                form.content.data = review.content
+                return render_template(
+                    "edit_review.html",
+                    title="New Review",
+                    form=form,
+                    star=review.star,
+                )
+        return redirect(url_for('logout'))
+    return redirect(url_for('login'))
 
-            db.session.add(review)
-            db.session.commit()
-            flash("Your review has been updated!", "success")
-            return redirect(url_for("reviews"))
-        return render_template("register.html", title="Register", form=form)
-    elif request.method == "GET":
-        form.title.data = review.title
-        form.link.data = review.link
-        form.review.data = review.review
-        form.content.data = review.content
+
+@app.route("/admin", methods=["GET"])
+def admin():
+    if current_user.is_authenticated and current_user.super_user:
+        reviews = Reviews.query.all()
         return render_template(
-            "edit_review.html",
-            title="New Review",
-            form=form,
-            star=review.star,
+            "admin.html",
+            title="admin",
+            reviews=reviews,
         )
+    else:
+        logout_user()
+        return redirect(url_for('login'))
+    
+@app.route("/review_edit_admin/<string:review_id>", methods=["GET", "POST"])
+def review_edit_admin(review_id):
+    if current_user.is_authenticated:
+        review = Reviews.query.filter_by(id=review_id).first()
+        if current_user.super_user:
+            form = PostForm()
+            if request.method == "POST":
+                if form.validate_on_submit():
+                    review.star = request.form["star"]
+                    review.link = form.link.data
+                    review.review = form.review.data
+                    review.content = form.content.data
+                    review.title = form.title.data
+
+                    db.session.add(review)
+                    db.session.commit()
+                    flash("Review has been updated!", "success")
+                    return redirect(url_for("admin"))
+                return render_template("register.html", title="Register", form=form)
+            elif request.method == "GET":
+                form.title.data = review.title
+                form.link.data = review.link
+                form.review.data = review.review
+                form.content.data = review.content
+                return render_template(
+                    "edit_review.html",
+                    title="Review edit",
+                    form=form,
+                    star=review.star,
+                )
+        return redirect(url_for('logout'))
+    return redirect(url_for('login'))
