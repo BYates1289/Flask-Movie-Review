@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="container-fluid table-responsive mt-5">
+    <table class="table table-hover table-dark">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">title</th>
+                <th scope="col">link</th>
+                <th scope="col">review</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for review in reviews  %}
+            <tr>
+                <th scope="row">{{review.id}}</th>
+                <td>{{review.title}}</td>
+                <td>
+                    <a href="{{review.link}}" target="_blank">poster</a>
+                </td>
+                <td>{{review.review}}</td>
+                <td>
+                    <span>
+                        <a class="mr-3" href="{{url_for('review_delete',review_id=review.id)}}"><img
+                                src="/static/trash-solid.svg" class="image-fluid" alt="" style="width:20px;"></a>
+                        <a href="{{url_for('review_edit_admin',review_id=review.id)}}"><img src="/static/edit.svg"
+                                class="image-fluid" alt="" style="width:20px;"></a>
+                    </span>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock content %}
+{% block script %}
+
+{% endblock script %}

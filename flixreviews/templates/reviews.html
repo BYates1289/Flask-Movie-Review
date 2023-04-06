@@ -24,32 +24,34 @@
 													<li class="list-group-item">
 														<div class="row align-items-center">
 															<p class="col-md-6">Reviewer:</p>
-															<p class="col-md-6 username">{{ i.author }}</p>
+															<p class="col-md-6 username">{{ i.author.username }}</p>
 														</div>
 													</li>
 													<li class="list-group-item">
 														<div class="row align-items-center">
 															<p class="col-md-6">Date:</p>
-															<p class="col-md-6 creation-date">{{ i.created_at }}</p>
+															<p class="col-md-6 creation-date">{{ i.date_posted }}</p>
 														</div>
 													</li>
-													{% if check==1 and user==i.author %}
-													<li class="list-group-item">
-                                                        <div class="row align-items-center">
-                                                            <div class="col-md-12">
-                                                                <form method="get"
-                                                                    action="{{url_for('review_edit', review_id=i._id)}}">
-                                                                    <button type="submit"
-                                                                        class="btn btn-secondary w-100">Edit</button>
-                                                                </form>
-                                                            </div>
-                                                        </div>
-                                                    </li>
+													{% if current_user == i.author %}
 													<li class="list-group-item">
 														<div class="row align-items-center">
 															<div class="col-md-12">
-																<form method="post" action="{{url_for('review_delete', review_id=i._id)}}">
-																	<button type="submit" class="btn btn-danger w-100" aria-label="Delete Button">Delete</button>
+																<form method="get"
+																	action="{{url_for('review_edit', review_id=i.id)}}">
+																	<button type="submit"
+																		class="btn btn-secondary w-100">Edit</button>
+																</form>
+															</div>
+														</div>
+													</li>
+													<li class="list-group-item">
+														<div class="row align-items-center">
+															<div class="col-md-12">
+																<form method="post"
+																	action="{{url_for('review_delete', review_id=i.id)}}">
+																	<button type="submit" class="btn btn-danger w-100"
+																		aria-label="Delete Button">Delete</button>
 																</form>
 															</div>
 														</div>
@@ -59,7 +61,8 @@
 											</div>
 										</div>
 										<div class="col-md-6">
-											<img class="img-fluid img-large movie-poster" src=" {{i.link}} " alt="Movie Poster">
+											<img class="img-fluid img-large movie-poster" src=" {{i.link}} "
+												alt="Movie Poster">
 										</div>
 									</div>
 								</div>
@@ -67,7 +70,8 @@
 						</div>
 					</div>
 				</div>
-				<button type="button" class="btn btn-danger btn-lg" id="button-top"><i class="fas fa-chevron-up"></i></button>
+				<button type="button" class="btn btn-danger btn-lg" id="button-top"><i
+						class="fas fa-chevron-up"></i></button>
 			</div>
 			{% endfor %}
 		</div>

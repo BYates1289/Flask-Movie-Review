@@ -1,7 +1,8 @@
 {% extends "layout.html" %}
 {% block head %}
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='dist/assets/owl.carousel.min.css') }}" />
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='dist/assets/owl.theme.default.min.css') }}" />
+<link rel="stylesheet" type="text/css"
+	href="{{ url_for('static', filename='dist/assets/owl.theme.default.min.css') }}" />
 {% endblock head %}
 {% block content %}
 <div class="container">
@@ -23,7 +24,7 @@
 					</div>
 				</div>
 				<div class="content-column mt-2">
-					<form method="get" action="{{url_for('review_show', review_id=i._id)}}">
+					<form method="get" action="{{url_for('review_show', review_id=i.id)}}">
 						<button class="btn-submit" type="submit" aria-label="Read Review">Read Review</button>
 					</form>
 				</div>
