@@ -37,6 +37,9 @@
 						<a class="nav-item nav-link" href="{{url_for('reviews')}}">Reviews</a>
 						<a class="nav-item nav-link" href="{{url_for('new_review')}}">Post A Review</a>
 						<a class="nav-item nav-link" href="{{url_for('account')}}">Profile</a>
+						{% if current_user.super_user %}
+						<a class="nav-item nav-link" href="{{url_for('admin')}}">Admin</a>
+						{% endif %}
 						<a class="nav-item nav-link" href="{{url_for('logout')}}">Logout</a>
 						{%else%}
 						<a class="nav-item nav-link" href="{{url_for('login')}}">Login</a>
