@@ -3,6 +3,7 @@
 <div class="row row d-flex justify-content-center scrollTop" onclick="scrollToTop()">
 	<div class="col-md-10">
 		<div class="py-4">
+			{% if reviews %}
 			{% for i in reviews %}
 			<div class="container mt-3">
 				<div class="row justify-content-center">
@@ -13,9 +14,11 @@
 									<h5><strong>{{ i.title }}</strong></h5>
 									<p>{{i.review}}</p>
 									<div class="stars">
+										{% if i.star %}
 										{% for i in i.star|ran %}
 										<span class="fa fa-star checked"></span>
 										{% endfor %}
+										{% endif %}
 									</div>
 									<div class="row d-flex align-items-center form-group mt-3">
 										<div class="col-md-6">
@@ -74,6 +77,7 @@
 						class="fas fa-chevron-up"></i></button>
 			</div>
 			{% endfor %}
+			{% endif %}
 		</div>
 	</div>
 </div>

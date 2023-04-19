@@ -24,7 +24,7 @@
                 <td>{{review.review}}</td>
                 <td>
                     <span>
-                        <a class="mr-3" href="{{url_for('review_delete',review_id=review.id)}}"><img
+                        <a class="mr-3" href="{{url_for('review_delete_admin',review_id=review.id)}}"><img
                                 src="/static/trash-solid.svg" class="image-fluid" alt="" style="width:20px;"></a>
                         <a href="{{url_for('review_edit_admin',review_id=review.id)}}"><img src="/static/edit.svg"
                                 class="image-fluid" alt="" style="width:20px;"></a>
