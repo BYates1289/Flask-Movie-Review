@@ -121,7 +121,7 @@ def new_review():
 @app.route('/reviews')
 def reviews():
     reviews = Reviews.query.all()
-    return render_template('reviews.html', reviews=reviews)
+    return render_template('reviews.html', reviews=reviews) 
 
 
 @app.route('/review_delete/<string:review_id>', methods=['Post'])
@@ -220,5 +220,18 @@ def review_edit_admin(review_id):
                     form=form,
                     star=review.star,
                 )
+        return redirect(url_for('logout'))
+    return redirect(url_for('login'))
+
+
+@app.route('/review_delete_admin/<string:review_id>', methods=['Get'])
+def review_delete_admin(review_id):
+    if current_user.is_authenticated:
+        dlt = Reviews.query.get_or_404(review_id)
+        if current_user.super_user:
+            db.session.delete(dlt) 
+            db.session.commit()
+            flash('Your review has been deleted!', 'success')
+            return redirect(url_for('admin'))
         return redirect(url_for('logout'))
     return redirect(url_for('login'))
