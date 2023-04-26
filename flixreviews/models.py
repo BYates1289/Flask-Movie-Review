@@ -24,7 +24,7 @@ class User(db.Model, UserMixin):
 
 class Reviews(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.String(100),unique=True, nullable=False)
+    title = db.Column(db.String(100), nullable=False)
     link = db.Column(db.String(30), nullable=False)
     review = db.Column(db.String(30), nullable=False)
     content = db.Column(db.String(30), nullable=False)
