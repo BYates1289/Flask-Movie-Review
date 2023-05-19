@@ -12,11 +12,9 @@
 									<h5 class="mobile-center font-weight-bold">{{ review.title }} </h5>
 									<p>{{ review.review }} </p>
 									<div class="stars mobile-center">
-										{% if review.star %}
 										{% for i in review.star|ran %}
 										<span class="fa fa-star checked"></span>
 										{% endfor %}
-										{% endif %}
 									</div>
 									<div class="row d-flex align-items-center form-group mt-3">
 										<div class="col-md-6">
