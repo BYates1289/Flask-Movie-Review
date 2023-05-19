@@ -18,7 +18,7 @@
 										{% for i in i.star|ran %}
 										<span class="fa fa-star checked"></span>
 										{% endfor %}
-										{% endif %} 
+										{% endif %}
 									</div>
 									<div class="row d-flex align-items-center form-group mt-3">
 										<div class="col-md-6">
@@ -33,7 +33,9 @@
 													<li class="list-group-item">
 														<div class="row align-items-center">
 															<p class="col-md-6">Date:</p>
-															<p class="col-md-6 creation-date">{{ i.date_posted }}</p>
+															<p class="col-md-6 creation-date">
+																{{ i.date_posted.strftime('%Y-%m-%d') }}
+															</p>
 														</div>
 													</li>
 													{% if current_user == i.author %}
